@@ -1,0 +1,10 @@
+.navbar {
+    height: 80px;
+    padding: 20px;
+    background-color: #F8F8F8;
+}
+
+.logo {
+    height: 80px;
+    float: left;
+}
