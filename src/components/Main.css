@@ -1,0 +1,7 @@
+.big-marketing-picture {
+    height: 300px;
+    width: 500px;
+    overflow: hidden;
+    background: url('../img/bigpic1.jpg') no-repeat center;
+    background-size: 100%;
+}
