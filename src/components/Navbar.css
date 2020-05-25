@@ -1,10 +1,11 @@
 .navbar {
-    height: 80px;
-    padding: 20px;
-    background-color: #F8F8F8;
+    height: 50px;
+    background-color: #EDF5E1;
+    /* #5cdb95 8ee4af */
+    border-bottom: 5px black solid;
 }
 
 .logo {
-    height: 80px;
+    height: 100%;
     float: left;
 }

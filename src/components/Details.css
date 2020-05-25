@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    grid-column: 1 / 4;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    /* background-color: rosybrown; */
+    text-align: justify;
+}
+
+.details-title {
+    margin: 10px 0 10px 0;
+    font-size: 13px;
+}
+
+.details-content {
+    font-size: 15px;
+}
+
+.details-content > p {
+    padding-top: 10px;
+}
+
+.bullet-points {
+    margin-left: 45px;
+    padding-top: 3px;
+}
+
+.bullet-points > li {
+    padding-top: 3px;
+}

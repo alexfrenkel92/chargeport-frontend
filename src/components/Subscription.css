@@ -1,0 +1,31 @@
+.subscription-wrapper {
+    /* display: inline-block; */
+    /* display: flex;
+    align-items: center; */
+    /* flex-direction: column; */
+    /* justify-content: space-around; */
+    /* height: 100px; */
+    margin: 10px 0 10px 0;
+    grid-column: 3 / 5;
+    grid-row: 3 / 4;
+}
+
+.subscription {
+    display: flex;
+    flex-direction: column;
+}
+
+.subscription > input {
+    width: 200px;
+    padding: 5px;
+    margin-top: 5px;
+    border: 1px solid rgb(87, 147, 85);
+    background: rgb(228, 248, 234);
+}
+
+.subscribe-button {
+    border-radius: 5px;
+    padding: 7px;
+    margin-top: 10px;
+    align-self: center;
+}

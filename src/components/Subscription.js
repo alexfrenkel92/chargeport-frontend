@@ -4,11 +4,14 @@ import Button from './Button';
 
 function Subscription() {
     return (
-        <form>
+        <div className='subscription-wrapper'>
+        <p>Feliratkozás a hírlevélre</p>
+        <form className='subscription'>
             <input type='text' placeholder='Név' />
             <input type='email' placeholder='E-mail cím' />
-            <Button className='sibscribeButton' textContent='Feliratkozás' />
+            <Button className='subscribe-button' textContent='Feliratkozás' />
         </form>
+        </div>
     )
 }
 

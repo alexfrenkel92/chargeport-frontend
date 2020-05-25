@@ -1,7 +1,32 @@
 .big-marketing-picture {
-    height: 300px;
-    width: 500px;
+    height: 275px;
+    width: 100%;
     overflow: hidden;
     background: url('../img/bigpic1.jpg') no-repeat center;
     background-size: 100%;
+    grid-column: 1 / 4;
+    grid-row-start: 2 / 3;
+}
+
+.main {
+    box-sizing: border-box;
+    margin: 0;
+    margin-top: 10px;
+    padding: 0 20px 0 20px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    /* grid-template-rows: repeat(2, minmax(300px, auto)); */
+    grid-gap: 20px;
+    /* grid-template-rows: 2fr; */
+    justify-items: center;
+    /* grid-column: 1 / 2;
+       grid-column: span 3;*/
+}
+
+.useage-data {
+    height: 250px;
+    width: 100%;
+    background-color: blueviolet;
+    grid-column: 4 / 7;
+    grid-row: 2 / 3;
 }

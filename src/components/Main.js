@@ -12,6 +12,7 @@ function Main() {
             <Button className='big-marketing-picture' />
             <Video />
             <Subscription />
+            <Button className='useage-data' />
         </div>
     )
 }

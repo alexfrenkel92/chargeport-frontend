@@ -1,11 +1,11 @@
 import React from 'react';
 import './Navbar.css';
-// import logo from '../img/market1.png';
+import logo from '../img/chargeportLC22.png';
 
 function Navbar() {
     return (
         <div className = 'navbar'>
-            {/* <img src={logo} class='logo' alt='market-place-logo' /> */}
+            <img src={logo} class='logo' alt='market-place-logo' />
             Navbar to be
         </div>
     );
