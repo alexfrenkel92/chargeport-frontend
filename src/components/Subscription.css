@@ -8,6 +8,7 @@
     margin: 10px 0 10px 0;
     grid-column: 3 / 5;
     grid-row: 3 / 4;
+    justify-self: center;
 }
 
 .subscription {
@@ -28,4 +29,13 @@
     padding: 7px;
     margin-top: 10px;
     align-self: center;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.subscribe-button:hover {
+    background-color: #3ba749;
+    color: white;
+    transition: 0.2s;
+    cursor: pointer;
 }

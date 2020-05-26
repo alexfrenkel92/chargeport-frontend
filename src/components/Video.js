@@ -16,7 +16,7 @@ function Video() {
                 />
             </div>
             <div className='player-text'>
-                <p>A töltőtípusok használatáról bővebben a fenti videóból tájékozódhat.</p>
+                <p>A töltőtípusok használatáról bővebben a fenti videóból tájékozódhatsz.</p>
             </div>
         </div>
     )

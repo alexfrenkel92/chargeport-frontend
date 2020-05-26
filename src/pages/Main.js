@@ -1,9 +1,9 @@
 import React from 'react';
 import './Main.css';
-import Details from './Details';
-import Button from './Button';
-import Video from './Video';
-import Subscription from './Subscription';
+import Details from '../components/Details';
+import Button from '../components/Button';
+import Video from '../components/Video';
+import Subscription from '../components/Subscription';
 
 function Main() {
     return (

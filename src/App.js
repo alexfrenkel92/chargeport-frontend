@@ -1,17 +1,27 @@
 import React from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
 import './App.css';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import LandingPage from './pages/LandingPage';
+import Navbar from './components/Navbar';
+import Main from './pages/Main';
+import AboutUs from './pages/AboutUs';
+import EVcalc from './pages/EVcalc';
+import ChargePortInstall from './pages/ChargePortInstall';
+import Forum from './pages/Forum';
+import Footer from './components/Footer';
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <div className='App'>
-        <Switch>
-          <Route path='/' exact component={LandingPage} />
-        </Switch>
+        <Navbar />
+          <Route exact path='/' exact component={Main} />
+          <Route path='/aboutus' exact component={AboutUs} />
+          <Route path='/evcalculator' exact component={EVcalc} />
+          <Route path='/chargeportinstall' exact component={ChargePortInstall} />
+          <Route path='/forum' exact component={Forum} />
+        <Footer />
       </div>
-    </Router>
+    </BrowserRouter>
   );
 }
 
