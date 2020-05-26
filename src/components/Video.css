@@ -10,8 +10,9 @@
     text-align: center;
     padding-top: 10px;
     font-size: 15px;
+    color: rgb(6, 50, 7);
 }
 
 .player {
-    border: 2px greenyellow solid;
+    border: 2px rgba(123, 162, 66, 0.993) solid;
 }

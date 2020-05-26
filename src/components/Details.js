@@ -1,6 +1,5 @@
 import React from 'react';
 import './Details.css';
-import Button from './Button';
 
 function Details() {
     return (

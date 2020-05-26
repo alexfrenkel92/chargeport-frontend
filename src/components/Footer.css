@@ -1,0 +1,19 @@
+.footer {
+    height: 100px;
+    background-color: #EDF5E1;
+    display: grid;
+    grid-template-columns: auto 1000px auto;
+    border-top: 5px  #3ba749 solid;
+}
+
+.footer-content {
+    grid-column: 2 / 3;
+    align-self: center;
+    text-align: center;
+    color: rgb(250, 4, 4);
+    font-style: italic;
+}
+
+.footer-content > p {
+    font-weight: bold;
+}

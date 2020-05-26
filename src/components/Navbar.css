@@ -1,10 +1,6 @@
 .navbar {
-    /* display: grid;
-    grid-template-columns: 3; */
-
-
-
-
+    display: grid;
+    grid-template-columns: auto 1000px auto;
     height: 50px;
     position: relative;
     background-color: #EDF5E1;
@@ -12,14 +8,16 @@
     border-bottom: 5px  #3ba749 solid;
 }
 
+
 .logo {
+    grid-column: 2 / 3;
     height: 100%;
-    float: left;
 }
 
 .buttons {
     position: absolute;
     bottom: 0;
+    grid-column: 2 / 3;
     left: 300px;
 }
 
@@ -28,14 +26,13 @@
     height: 30px;
     font-size: 15px;
     font-weight: bold;
-    /* color: #3ba749; */
     background-color: transparent;
     border: 0;
     border-left: 1px #3ba749 solid;
     margin: 15px 0 0 0;
 }
 
-.button::-moz-focus-inner { /* In FIREFIX disappears the dotted line around the clicked element */
+.button::-moz-focus-inner { /* In Firefox disappears the dotted line around the clicked element */
     border: 0;
 }
 

@@ -1,14 +1,9 @@
 .subscription-wrapper {
-    /* display: inline-block; */
-    /* display: flex;
-    align-items: center; */
-    /* flex-direction: column; */
-    /* justify-content: space-around; */
-    /* height: 100px; */
     margin: 10px 0 10px 0;
     grid-column: 3 / 5;
     grid-row: 3 / 4;
     justify-self: center;
+    color: rgb(6, 50, 7);
 }
 
 .subscription {
@@ -31,6 +26,7 @@
     align-self: center;
     font-size: 15px;
     font-weight: normal;
+    color: rgb(6, 50, 7);
 }
 
 .subscribe-button:hover {
