@@ -3,7 +3,7 @@
     grid-template-columns: auto 1000px auto;
     height: 50px;
     position: relative;
-    background-color: #EDF5E1;
+    /* background-color: #EDF5E1; */
     /* #5cdb95 8ee4af */
     border-bottom: 5px  #3ba749 solid;
 }

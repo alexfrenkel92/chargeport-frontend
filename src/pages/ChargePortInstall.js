@@ -1,12 +1,12 @@
 import React from 'react';
-import './ChargePortInstall.css'
+import './ChargePortInstall.css';
 
 function ChargePortInstall () {
-    return (
-        <div className='chargeport-install'>
-            Feltöltés alatt...
-        </div>
-    )
+  return (
+    <div className='chargeport-install'>
+            Nincs tartalom
+    </div>
+  );
 }
 
 export default ChargePortInstall;

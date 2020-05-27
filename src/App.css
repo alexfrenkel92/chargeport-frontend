@@ -1,8 +1,9 @@
 * {
     font-weight: normal;
     box-sizing: border-box;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-family: Avenir,BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
     letter-spacing: 1px;
+    box-sizing: border-box;
 }
 
 body {
@@ -13,16 +14,8 @@ body {
 
 .App {
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
-
-
-    background-color: #FEFFFF;
-    /* margin: auto; 
-    display: flex;
-    flex-direction: column; */
-}
-
-.footer {
-    height: 100px;
-    background-color: #EDF5E1;
+    grid-template-columns: auto 1000px auto;
+    grid-template-rows: repeat(2, auto);
+    /* background-color: #FEFFFF; */
+    background-color: rgba(237, 245, 225, 0.333);
 }

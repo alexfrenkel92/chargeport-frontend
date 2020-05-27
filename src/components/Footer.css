@@ -1,9 +1,10 @@
 .footer {
     height: 100px;
-    background-color: #EDF5E1;
+    /* background-color: #EDF5E1; */
     display: grid;
     grid-template-columns: auto 1000px auto;
     border-top: 5px  #3ba749 solid;
+    /* background-color: rgb(245, 245, 245); */
 }
 
 .footer-content {

@@ -9,16 +9,16 @@ import ChargePortInstall from './pages/ChargePortInstall';
 import Forum from './pages/Forum';
 import Footer from './components/Footer';
 
-function App() {
+function App () {
   return (
     <BrowserRouter>
       <div className='App'>
         <Navbar />
-          <Route exact path='/' exact component={Main} />
-          <Route path='/aboutus' exact component={AboutUs} />
-          <Route path='/evcalculator' exact component={EVcalc} />
-          <Route path='/chargeportinstall' exact component={ChargePortInstall} />
-          <Route path='/forum' exact component={Forum} />
+        <Route exact path='/' component={Main} />
+        <Route path='/aboutus' exact component={AboutUs} />
+        <Route path='/evcalculator' exact component={EVcalc} />
+        <Route path='/chargeportinstall' exact component={ChargePortInstall} />
+        <Route path='/forum' exact component={Forum} />
         <Footer />
       </div>
     </BrowserRouter>

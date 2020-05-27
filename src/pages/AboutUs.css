@@ -1,6 +1,12 @@
 .aboutus {
-    height: 893px;
-    margin-top: 10px;
-    padding: 0 20px 0 20px;
-    background-color: yellowgreen;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    height: 100vh;
+    width: 1000px;
+    margin: -50px auto -100px auto;
+    padding: 60px 20px 0 20px;
+}
+
+.aboutus > p {
+    padding-top: 10px;
 }

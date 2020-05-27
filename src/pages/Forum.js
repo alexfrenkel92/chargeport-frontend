@@ -2,11 +2,11 @@ import React from 'react';
 import './Forum.css';
 
 function Forum () {
-    return (
-        <div className='forum-page'>
+  return (
+    <div className='forum-page'>
             Feltöltés alatt...
-        </div>
-    )
+    </div>
+  );
 }
 
 export default Forum;

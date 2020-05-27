@@ -1,4 +1,4 @@
-.big-marketing-picture {
+/* .big-marketing-picture {
     height: 275px;
     width: 100%;
     overflow: hidden;
@@ -6,9 +6,10 @@
     background-size: 100%;
     grid-column: 1 / 4;
     grid-row-start: 2 / 3;
-}
+} */
 
 .main {
+    grid-column: 2 / 3;
     width: 1000px;
     margin: 0;
     margin: 0 auto 0 auto;
@@ -16,7 +17,6 @@
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-gap: 20px;
-    background-color: rgba(237, 245, 225, 0.333);
 }
 
 .useage-data {
