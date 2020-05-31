@@ -21,6 +21,8 @@
 
 .subscribe-button {
     border-radius: 5px;
+    outline: 0;
+    border: 1px rgba(128, 149, 129, 0.503) solid;
     padding: 7px;
     margin-top: 10px;
     align-self: center;

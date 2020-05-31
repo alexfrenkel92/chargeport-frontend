@@ -1,10 +1,13 @@
 .footer {
-    height: 100px;
-    /* background-color: #EDF5E1; */
+    width: 100%;
+    height: fit-content;
+    background-color: rgb(248, 251, 243);
     display: grid;
-    grid-template-columns: auto 1000px auto;
+    grid-template-columns: 1fr 1000px 1fr;
     border-top: 5px  #3ba749 solid;
-    /* background-color: rgb(245, 245, 245); */
+    /* background-color: rgb(29, 226, 85); */
+    position: fixed;
+    bottom: 0;
 }
 
 .footer-content {
@@ -13,6 +16,7 @@
     text-align: center;
     color: rgb(250, 4, 4);
     font-style: italic;
+    padding: 10px;
 }
 
 .footer-content > p {

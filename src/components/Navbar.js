@@ -29,7 +29,7 @@ function Navbar () {
       <div className='buttons'>
         <Button className='about button' textContent='Rólunk' onClick={navigateToAboutUS} />
         <Button className='calc button' textContent='EV kalkulátor' onClick={navigateToEVcalc} />
-        <Button className='install button' textContent='Töltőtelepíés' onClick={navigateToInstall} />
+        <Button className='install button' textContent='Töltőtelepítés' onClick={navigateToInstall} />
         <Button className='forum button' textContent='Fórum' onClick={navigateToForum} />
       </div>
     </div>
