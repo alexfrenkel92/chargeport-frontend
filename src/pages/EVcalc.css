@@ -1,6 +1,7 @@
 .evcalc {
-    height: 100vh;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    min-height: calc(100% + 100px);
     width: 1000px;
-    margin: -50px auto -100px auto;
-    padding: 60px 20px 0 20px;
+    padding: 25px;
 }

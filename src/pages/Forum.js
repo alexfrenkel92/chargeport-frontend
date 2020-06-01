@@ -1,10 +1,11 @@
 import React from 'react';
 import './Forum.css';
+import RenderPost from '../components/RenderPost';
 
 function Forum () {
   return (
     <div className='forum-page'>
-            Feltöltés alatt...
+      <RenderPost />
     </div>
   );
 }

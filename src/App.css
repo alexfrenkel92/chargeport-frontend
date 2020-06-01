@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: rgba(237, 245, 225, 0.333);
+    background-color: rgb(248, 251, 243);
   }
 
 
@@ -15,7 +15,5 @@ body {
 .App {
     display: grid;
     grid-template-columns: auto 1000px auto;
-    grid-template-rows: repeat(2, auto);
-    /* background-color: #FEFFFF; */
-    background-color: rgba(237, 245, 225, 0.333);
+    grid-template-rows: repeat(3, auto);
 }
