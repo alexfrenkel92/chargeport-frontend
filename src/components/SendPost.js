@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './SendPost.css';
 import Button from '../components/Button';
 
-function SendPost() {
+function SendPost({ getPost }) { //will use getPost as param to rerender the RenderPost when new post is sent
     async function sendPost() {
         console.log(postContent);
         try {
@@ -27,6 +27,12 @@ function SendPost() {
         }
     }
 
+    function handleSendPost (e) {
+        e.preventDefault();
+        sendPost(); //sends the post
+        getPost(); //than rerenders the getPost component
+      }
+
     const [postContent, setPostData] = useState({ post_title: '', post_content: '' });
 
     const handlePostTitle = (e) => {
@@ -37,12 +43,11 @@ function SendPost() {
         setPostData({ post_title: postContent.post_title, post_content: e.target.value });
     }
 
-
     return (
-        <div className='send-post-wrapper'>
-            <input id='post_title' className='send-post-title' value={postContent.post_title} onChange={handlePostTitle} placeholder='Poszt címe' />
-            <input id='post_content' className='send-post-content' value={postContent.post_content} onChange={handlePostContent} placeholder='Poszt tartalma' />
-            <Button className='send-post-button' textContent='Megosztás' onClick={sendPost} />
+        <div>
+            <textarea className='send-post title' value={postContent.post_title} onChange={handlePostTitle} placeholder='Poszt címe' />
+            <textarea className='send-post content' value={postContent.post_content} onChange={handlePostContent} placeholder='Poszt tartalma' />
+            <Button className='send-post-button' textContent='Megosztás' onClick={handleSendPost} />
         </div>
     )
 }

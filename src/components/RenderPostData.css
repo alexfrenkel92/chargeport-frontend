@@ -1,0 +1,39 @@
+.render-post-data {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+}
+
+.render-post-title {
+    grid-row: 1 / 2;
+    font-weight: 600;
+    padding: 10px 0 0 0;
+}
+
+.render-post-content {
+    grid-row: 2 / 3;
+    padding: 0 0 10px 0;
+}
+
+.post-score-wrapper {
+    grid-row: 3 / 4;
+    display: grid;
+    grid-template-columns: 65px 65px 65px auto;
+    padding: 0 0 25px 0;
+}
+
+.up.vote {
+    grid-column: 1 / 2;
+}
+
+.down.vote {
+    grid-column: 2 / 3;
+}
+
+.vote {
+    height: 30px;
+}
+
+.render-post-score {
+    grid-column: 3 / 4;
+}

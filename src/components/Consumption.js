@@ -62,7 +62,7 @@ function Consumption() {
             <p className='text weekly'>Átadott villamos energia utóbbi 7 napban:</p>
             <img src={require('../img/charger4.png')} className='ac36img img' />
             <img src={require('../img/charger2.png')} className='ac22img img' />
-            <img src={require('../img/charger11.png')} className='dc50img' />
+            <img src={require('../img/charger1.png')} className='dc50img' />
             <div className='ac36daily sql-data'>
                 {consumptionAC36.map(cons =>
                     <ConsumptionData key={cons.id} daily_consumption={cons.daily_consumption + 'kW'} />)}

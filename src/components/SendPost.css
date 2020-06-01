@@ -1,0 +1,38 @@
+.send-post {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    padding: 10px;
+    margin-top: 15px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.send-post.title {
+    height: 50px;
+}
+
+.send-post.content {
+    height: 100px;
+}
+
+.send-post-button {
+    border-radius: 5px;
+    outline: 0;
+    border: 1px rgba(128, 149, 129, 0.503) solid;
+    padding: 7px;
+    margin-top: 10px;
+    align-self: center;
+    font-size: 15px;
+    font-weight: 600;
+    color: rgb(6, 50, 7);
+}
+
+.send-post-button:hover {
+    background-color: #3ba749;
+    color: white;
+    transition: 0.2s;
+    cursor: pointer;
+}
