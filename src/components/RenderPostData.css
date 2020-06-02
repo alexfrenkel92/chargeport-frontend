@@ -35,6 +35,7 @@
 .vote {
     height: 20px;
     justify-self: center;
+    cursor: pointer;
 }
 
 .render-post-score {
