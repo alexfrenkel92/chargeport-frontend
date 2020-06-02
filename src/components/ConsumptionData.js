@@ -1,10 +1,10 @@
 import React from 'react';
 
-function consumptionData ({ dailyConsumption, weeklyConsumption }) {
+function consumptionData ({ daily_consumption, weekly_consumption }) {
   return (
     <div className='consumption-data'>
-      {dailyConsumption}
-      {weeklyConsumption}
+      {daily_consumption}
+      {weekly_consumption}
     </div>
   );
 }
