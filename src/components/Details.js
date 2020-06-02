@@ -5,7 +5,7 @@ function Details () {
   return (
     <article className='details'>
       <div className='details-title'>
-        <h2>Köszöntünk az oldalon!</h2>
+        <h3>Köszöntünk az oldalon!</h3>
       </div>
       <div className='details-content'>
         <p>Az ChargePort Zrt. elsődleges küldetése a felhasználók számára komfortos szolgáltatást biztosító töltőhálózat kialakítása, olyan országos infrastruktúra felépítése, mely hosszútávon képes hatékonyan működni, fejlődni.</p>
@@ -16,7 +16,6 @@ function Details () {
           <li>22kW AC - Level 2</li>
           <li>50kW DC - Level 3</li>
         </div>
-        {/* <Button className='learnMoreButton' textContent='Bővebben' /> */}
       </div>
     </article>
   );

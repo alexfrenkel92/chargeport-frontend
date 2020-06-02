@@ -34,12 +34,12 @@ function RenderPost () {
         </h2>
         {renderedPost.map(post =>
           <RenderPostData
+            getPost={getPost}
             key={post.id}
             id={post.id}
             post_title={post.post_title}
             post_content={post.post_content}
             score={post.score}
-            getPost={getPost}
           />)}
       </div>
     </div>

@@ -2,4 +2,5 @@
 
 .gallery-wrapper {
     border: 2px rgba(128, 149, 129, 0.503) solid;
+    margin-top: -50px;
 }

@@ -6,6 +6,12 @@
     color: rgb(6, 50, 7);
 }
 
+.subscription-wrapper > p {
+    font-size: normal;
+    font-weight: 600;
+    text-align: center;
+}
+
 .subscription {
     display: flex;
     flex-direction: column;

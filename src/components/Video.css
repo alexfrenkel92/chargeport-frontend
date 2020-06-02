@@ -8,9 +8,10 @@
 
 .player-text {
     text-align: center;
-    padding-top: 10px;
+    padding-top: 5px;
     font-size: 15px;
     color: rgb(6, 50, 7);
+    font-size: small;
 }
 
 .player {

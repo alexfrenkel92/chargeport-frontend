@@ -14,10 +14,12 @@
 .details-title {
     margin: 10px 0 10px 0;
     font-size: 13px;
+    font-size: medium;
 }
 
 .details-content {
     font-size: 15px;
+    font-size: small;
 }
 
 .details-content > p {

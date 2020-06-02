@@ -4,7 +4,6 @@ import Button from './Button';
 
 function Subscription () {
   async function subscribe () {
-    console.log(subscriptionData);
     try {
       const fetchResponse = await fetch('http://localhost:8080/api/subscription', {
         method: 'POST',
@@ -21,6 +20,7 @@ function Subscription () {
         return false;
       }
       setData({ name: '', email: '' });
+      alert('E-mail elküldve');
       return data;
     } catch (error) {
       return error;

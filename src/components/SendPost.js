@@ -4,7 +4,6 @@ import Button from '../components/Button';
 
 function SendPost ({ getPost }) { // will use getPost as param to rerender the RenderPost when new post is sent
   async function sendPost () {
-    console.log(postData);
     try {
       const fetchResponse = await fetch('http://localhost:8080/api/post', {
         method: 'POST',

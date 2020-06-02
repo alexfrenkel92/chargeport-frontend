@@ -2,7 +2,7 @@
     grid-column: 4 / 7;
     grid-row: 2 / 3;
     display: grid;
-    grid-template-columns: 150px repeat(3, 1fr);
+    grid-template-columns: 130px repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
 }
 
@@ -26,15 +26,15 @@
     align-self: flex-start;
     /* padding-top: 5px; */
     font-weight: 600;
-
+    font-size: smaller;
 }
 
 .text {
     grid-column: 1 / 2;
-    word-break: break-all;
     word-wrap: break-word;
     font-weight: 550;
     align-self: center;
+    font-size: smaller;
 }
 
 .daily {
@@ -48,23 +48,22 @@
 .ac36img {
     grid-column: 2 / 3;
     grid-row: 1 / 1;
+    width: 50%;
 }
 
 .ac22img {
     grid-column: 3 / 4;
     grid-row: 1 / 1;
+    width: 48%;
 }
 
 .dc50img {
     grid-column: 4 / 5;
     grid-row: 1 / 1;
-    width: 60%;
-    display: flex;
-    align-self: flex-end;
-    justify-self: center;}
+    width: 55%;
+}
 
 .img {
-    width: 50%;
     display: flex;
     align-self: flex-end;
     justify-self: center;
@@ -104,4 +103,5 @@
 .sql-data {
     align-self: center;
     justify-self: center;
+    font-size: smaller;
 }

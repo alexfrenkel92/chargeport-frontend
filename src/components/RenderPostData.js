@@ -3,13 +3,14 @@ import './RenderPostData.css';
 import Button from './Button';
 import ModifyPost from './ModifyPost';
 
-function RenderPostData ({ id, post_title, post_content, post_timestamp, score, getPost }) {
+function RenderPostData ({ id, post_title, post_content, score, getPost }) {
   async function upVote () {
     try {
       await fetch(`http://localhost:8080/api/post/upvote/${id}`, {
         method: 'PUT',
         headers: { 'Content-type': 'application/json' }
       });
+      getPost();
       return;
     } catch (error) {
       return error;
@@ -19,7 +20,6 @@ function RenderPostData ({ id, post_title, post_content, post_timestamp, score, 
   function handleUpVote (e) {
     e.preventDefault();
     upVote();
-    getPost();
   }
 
   async function downVote () {
@@ -28,6 +28,7 @@ function RenderPostData ({ id, post_title, post_content, post_timestamp, score, 
         method: 'PUT',
         headers: { 'Content-type': 'application/json' }
       });
+      getPost();
       return;
     } catch (error) {
       return error;
@@ -37,7 +38,6 @@ function RenderPostData ({ id, post_title, post_content, post_timestamp, score, 
   function handleDownVote (e) {
     e.preventDefault();
     downVote();
-    getPost();
   }
 
   async function deletePost () {
@@ -46,6 +46,7 @@ function RenderPostData ({ id, post_title, post_content, post_timestamp, score, 
         method: 'DELETE',
         headers: { 'Content-type': 'application/json' }
       });
+      getPost();
       return;
     } catch (error) {
       return error;
@@ -55,7 +56,6 @@ function RenderPostData ({ id, post_title, post_content, post_timestamp, score, 
   function handleDeleteClick (e) {
     e.preventDefault();
     deletePost();
-    getPost();
   }
 
   // responsible to modify a post
@@ -79,15 +79,14 @@ function RenderPostData ({ id, post_title, post_content, post_timestamp, score, 
           {post_content}
         </p>
         <div className='post-score-wrapper'>
-          <img className='up vote' src={require('../img/like.png')} onClick={handleUpVote} />
-          <img className='down vote' src={require('../img/dislike.png')} onClick={handleDownVote} />
+          <img className='up vote' src={require('../img/like.png')} onClick={handleUpVote} alt='Upvote' />
+          <img className='down vote' src={require('../img/dislike.png')} onClick={handleDownVote} alt='Downvote' />
           <p className='render-post-score'>
             {score}
           </p>
           <Button className='modify post-button' textContent='Módosítás' onClick={handleModifyClick} />
           <Button className='delete post-button' textContent='Törlés' onClick={handleDeleteClick} />
         </div>
-        {post_timestamp}
       </div>
       : <div>
         <ModifyPost id={id} postTitle={post_title} postContent={post_content} settingTheView={settingTheView} getPost={getPost} />
