@@ -5,7 +5,7 @@ import Button from '../components/Button';
 function SendPost ({ getPost }) { // will use getPost as param to rerender the RenderPost when new post is sent
   async function sendPost () {
     try {
-      const url = 'http://localhost:8080';
+      const url = 'https://chargeport-backend.herokuapp.com' || 'http://localhost:8080';
       const fetchResponse = await fetch(`${url}/api/post`, {
         method: 'POST',
         headers: { 'Content-type': 'application/json' },

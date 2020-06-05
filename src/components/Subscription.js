@@ -5,8 +5,7 @@ import Button from './Button';
 function Subscription () {
   async function subscribe () {
     try {
-      // const url = 'http://localhost:8080';
-      const url = 'https://chargeport-backend.herokuapp.com';
+      const url = 'https://chargeport-backend.herokuapp.com' || 'http://localhost:8080';
       const fetchResponse = await fetch(`${url}/api/subscription`, {
         method: 'POST',
         headers: { 'Content-type': 'application/json' },

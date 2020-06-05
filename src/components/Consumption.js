@@ -6,8 +6,8 @@ function Consumption () {
   const [consumptionAC36, setConsumptionAC36] = useState([]);
   async function getConsumptionAC36 () {
     try {
-      const url = 'http://localhost:8080';
-      const fetchResponse = await fetch(`${url}/api/dailyconsumption/ac36`, {
+      const url = 'https://chargeport-backend.herokuapp.com' || 'http://localhost:8080';
+      const fetchResponse = await fetch(`${url}/api/consumption/ac36`, {
         method: 'GET',
         headers: { 'Content-type': 'application/json' }
       });
@@ -21,8 +21,8 @@ function Consumption () {
   const [consumptionAC22, setConsumptionAC22] = useState([]);
   async function getConsumptionAC22 () {
     try {
-      const url = 'http://localhost:8080';
-      const fetchResponse = await fetch(`${url}/api/dailyconsumption/ac22`, {
+      const url = 'https://chargeport-backend.herokuapp.com' || 'http://localhost:8080';
+      const fetchResponse = await fetch(`${url}/api/consumption/ac22`, {
         method: 'GET',
         headers: { 'Content-type': 'application/json' }
       });
@@ -36,8 +36,8 @@ function Consumption () {
   const [consumptionDC50, setConsumptionDC50] = useState([]);
   async function getConsumptionDC50 () {
     try {
-      const url = 'http://localhost:8080';
-      const fetchResponse = await fetch(`${url}/api/dailyconsumption/dc50`, {
+      const url = 'https://chargeport-backend.herokuapp.com' || 'http://localhost:8080';
+      const fetchResponse = await fetch(`${url}/api/consumption/dc50`, {
         method: 'GET',
         headers: { 'Content-type': 'application/json' }
       });
