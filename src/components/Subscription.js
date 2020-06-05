@@ -5,7 +5,8 @@ import Button from './Button';
 function Subscription () {
   async function subscribe () {
     try {
-      const fetchResponse = await fetch('http://localhost:8080/api/subscription', {
+      const url = 'http://localhost:8080';
+      const fetchResponse = await fetch(`${url}/api/subscription`, {
         method: 'POST',
         headers: { 'Content-type': 'application/json' },
         body: JSON.stringify(subscriptionData)

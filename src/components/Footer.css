@@ -1,11 +1,9 @@
 .footer {
     width: 100%;
-    /* height: fit-content; */
     background-color: rgb(250, 251, 248);
     display: grid;
     grid-template-columns: 1fr 1000px 1fr;
     border-top: 5px  #3ba749 solid;
-    /* background-color: rgb(29, 226, 85); */
     position: fixed;
     bottom: 0;
 }

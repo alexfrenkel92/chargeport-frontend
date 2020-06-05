@@ -6,7 +6,6 @@
 .details {
     display: flex;
     flex-direction: column;
-    /* background-color: rosybrown; */
     text-align: justify;
     color: rgb(6, 50, 7);
 }

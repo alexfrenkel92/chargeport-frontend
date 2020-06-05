@@ -6,7 +6,8 @@ function Consumption () {
   const [consumptionAC36, setConsumptionAC36] = useState([]);
   async function getConsumptionAC36 () {
     try {
-      const fetchResponse = await fetch('http://localhost:8080/api/dailyconsumption/ac36', {
+      const url = 'http://localhost:8080';
+      const fetchResponse = await fetch(`${url}/api/dailyconsumption/ac36`, {
         method: 'GET',
         headers: { 'Content-type': 'application/json' }
       });
@@ -20,7 +21,8 @@ function Consumption () {
   const [consumptionAC22, setConsumptionAC22] = useState([]);
   async function getConsumptionAC22 () {
     try {
-      const fetchResponse = await fetch('http://localhost:8080/api/dailyconsumption/ac22', {
+      const url = 'http://localhost:8080';
+      const fetchResponse = await fetch(`${url}/api/dailyconsumption/ac22`, {
         method: 'GET',
         headers: { 'Content-type': 'application/json' }
       });
@@ -34,7 +36,8 @@ function Consumption () {
   const [consumptionDC50, setConsumptionDC50] = useState([]);
   async function getConsumptionDC50 () {
     try {
-      const fetchResponse = await fetch('http://localhost:8080/api/dailyconsumption/dc50', {
+      const url = 'http://localhost:8080';
+      const fetchResponse = await fetch(`${url}/api/dailyconsumption/dc50`, {
         method: 'GET',
         headers: { 'Content-type': 'application/json' }
       });

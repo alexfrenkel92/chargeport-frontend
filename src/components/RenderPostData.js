@@ -6,7 +6,8 @@ import ModifyPost from './ModifyPost';
 function RenderPostData ({ id, post_title, post_content, score, getPost }) {
   async function upVote () {
     try {
-      await fetch(`http://localhost:8080/api/post/upvote/${id}`, {
+      const url = 'http://localhost:8080';
+      await fetch(`${url}/api/post/upvote/${id}`, {
         method: 'PUT',
         headers: { 'Content-type': 'application/json' }
       });
@@ -24,7 +25,8 @@ function RenderPostData ({ id, post_title, post_content, score, getPost }) {
 
   async function downVote () {
     try {
-      await fetch(`http://localhost:8080/api/post/downvote/${id}`, {
+      const url = 'http://localhost:8080';
+      await fetch(`${url}/api/post/downvote/${id}`, {
         method: 'PUT',
         headers: { 'Content-type': 'application/json' }
       });
@@ -42,7 +44,8 @@ function RenderPostData ({ id, post_title, post_content, score, getPost }) {
 
   async function deletePost () {
     try {
-      await fetch(`http://localhost:8080/api/post/delete/${id}`, {
+      const url = 'http://localhost:8080';
+      await fetch(`${url}/api/post/delete/${id}`, {
         method: 'DELETE',
         headers: { 'Content-type': 'application/json' }
       });

@@ -4,6 +4,8 @@
     display: grid;
     grid-template-columns: 130px repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
+    height: 250px;
+    /* margin-top: -10px; */
 }
 
 .ac36 {
@@ -24,7 +26,7 @@
 .kw {
     text-align: center;
     align-self: flex-start;
-    /* padding-top: 5px; */
+    padding-top: 5px;
     font-weight: 600;
     font-size: smaller;
 }

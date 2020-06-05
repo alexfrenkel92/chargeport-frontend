@@ -4,14 +4,12 @@
     width: 500px;
     border-radius: 5px;
     border: 1px solid #000000;
-    padding: 10px;
+    padding: 7px;
     margin-top: 15px;
-    word-wrap: break-word;
-    word-break: break-all;
 }
 
 .send-post.title {
-    height: 50px;
+    height: 40px;
 }
 
 .send-post.content {

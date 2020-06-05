@@ -5,7 +5,8 @@ import Button from './Button';
 function ModifyPost ({ id, postTitle, postContent, settingTheView, getPost }) {
   async function editPost () {
     try {
-      const fetchResponse = await fetch(`http://localhost:8080/api/post/modify/${id}`, {
+      const url = 'http://localhost:8080';
+      const fetchResponse = await fetch(`${url}/api/post/modify/${id}`, {
         method: 'PUT',
         headers: { 'Content-type': 'application/json' },
         body: JSON.stringify(postData)
