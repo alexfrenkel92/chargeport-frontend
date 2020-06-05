@@ -2,5 +2,6 @@
     grid-column: 2 / 3;
     min-height: calc(100% + 100px);
     width: 1000px;
-    padding: 25px 15px 15px 15px;
+    padding-top: 25px;
+    font-size: normal;
 }
