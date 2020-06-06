@@ -246,11 +246,11 @@
 }
 
 textarea {
-    height: 30px;
+    height: 20px;
     text-align: center;
     justify-self: center;
     align-self: center;
-    padding-top: 3px;
+    padding: 5px 0 5px 0;
     font-size: 14px;
     resize: none;
     white-space: nowrap;
