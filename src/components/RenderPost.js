@@ -7,7 +7,7 @@ function RenderPost () {
   const [renderedPost, setRenderedPost] = useState([]);
   async function getPost () {
     try {
-      const url = 'https://chargeport-backend.herokuapp.com/';
+      const url = 'https://chargeport-backend.herokuapp.com';
       const fetchResponse = await fetch(`${url}/api/post`, {
         method: 'GET',
         headers: { 'Content-type': 'application/json' }
