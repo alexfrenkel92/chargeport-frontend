@@ -30,9 +30,9 @@ function EVcalc () {
     setMileage({ mileage: e.target.value });
   };
 
-  const evFuelCost100km = evData.evFuelPrice * 16;
+  const evFuelCost100km = evData.evFuelPrice * evData.evConsumption;
   const evFuelCostyear = mileageData.mileage * evData.evFuelPrice * evData.evConsumption / 100;
-  const iceFuelCost100km = iceData.iceFuelPrice * 6.5;
+  const iceFuelCost100km = iceData.iceFuelPrice * iceData.iceConsumption;
   const iceFuelCostyear = mileageData.mileage * iceData.iceFuelPrice * iceData.iceConsumption / 100;
 
   let saving = Math.round(iceFuelCostyear - evFuelCostyear);
@@ -42,6 +42,7 @@ function EVcalc () {
   if (evFuelCost100km > 0) {
     timespan = Math.round((evData.evPrice - iceData.icePrice) / (iceFuelCostyear - evFuelCostyear));
   }
+  if (Math.sign(timespan) === -1) timespan = '0';
 
   return (
     <div className='evcalc-wrapper'>
