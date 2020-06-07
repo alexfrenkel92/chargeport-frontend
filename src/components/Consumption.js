@@ -6,7 +6,7 @@ function Consumption () {
   const [consumptionAC36, setConsumptionAC36] = useState([]);
   async function getConsumptionAC36 () {
     try {
-      const url = 'http://localhost:8080';
+      const url = 'https://chargeport-backend.herokuapp.com/';
       const fetchResponse = await fetch(`${url}/api/consumption/ac36`, {
         method: 'GET',
         headers: { 'Content-type': 'application/json' }

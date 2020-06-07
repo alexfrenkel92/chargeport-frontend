@@ -6,7 +6,7 @@ import ModifyPost from './ModifyPost';
 function RenderPostData ({ id, post_title, post_content, score, getPost }) {
   async function upVote () {
     try {
-      const url = 'http://localhost:8080';
+      const url = 'https://chargeport-backend.herokuapp.com/';
       await fetch(`${url}/api/post/upvote/${id}`, {
         method: 'PUT',
         headers: { 'Content-type': 'application/json' }
@@ -25,7 +25,7 @@ function RenderPostData ({ id, post_title, post_content, score, getPost }) {
 
   async function downVote () {
     try {
-      const url = 'http://localhost:8080';
+      const url = 'https://chargeport-backend.herokuapp.com/';
       await fetch(`${url}/api/post/downvote/${id}`, {
         method: 'PUT',
         headers: { 'Content-type': 'application/json' }
@@ -44,7 +44,7 @@ function RenderPostData ({ id, post_title, post_content, score, getPost }) {
 
   async function deletePost () {
     try {
-      const url = 'http://localhost:8080';
+      const url = 'https://chargeport-backend.herokuapp.com/';
       await fetch(`${url}/api/post/delete/${id}`, {
         method: 'DELETE',
         headers: { 'Content-type': 'application/json' }

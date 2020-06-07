@@ -2,49 +2,46 @@ import React, { useState } from 'react';
 import './EVcalc.css';
 import Button from '../components/Button';
 
-function EVcalc() {
-  const [ evData, setEvData ] = useState({ evPrice: '', evFuelPrice: '', evConsumption: '' });
+function EVcalc () {
+  const [evData, setEvData] = useState({ evPrice: '', evFuelPrice: '', evConsumption: '' });
   const handleEVPrice = (e) => {
-    setEvData({ evPrice: e.target.value, evFuelPrice: evData.evFuelPrice, evConsumption: evData.evConsumption })
+    setEvData({ evPrice: e.target.value, evFuelPrice: evData.evFuelPrice, evConsumption: evData.evConsumption });
   };
   const handleEVFuelPrice = (e) => {
-    setEvData({ evPrice: evData.evPrice, evFuelPrice: e.target.value, evConsumption: evData.evConsumption })
+    setEvData({ evPrice: evData.evPrice, evFuelPrice: e.target.value, evConsumption: evData.evConsumption });
   };
   const handleEVConsumption = (e) => {
-    setEvData({ evPrice: evData.evPrice, evFuelPrice: evData.evFuelPrice, evConsumption: e.target.value })
+    setEvData({ evPrice: evData.evPrice, evFuelPrice: evData.evFuelPrice, evConsumption: e.target.value });
   };
 
-  const [ iceData, setIceData ] = useState({ icePrice: '', iceFuelPrice: '', iceConsumption: '' });
+  const [iceData, setIceData] = useState({ icePrice: '', iceFuelPrice: '', iceConsumption: '' });
   const handleICEPrice = (e) => {
-    setIceData({ icePrice: e.target.value, iceFuelPrice: iceData.iceFuelPrice, iceConsumption: iceData.iceConsumption })
+    setIceData({ icePrice: e.target.value, iceFuelPrice: iceData.iceFuelPrice, iceConsumption: iceData.iceConsumption });
   };
   const handleICEFuelPrice = (e) => {
-    setIceData({ icePrice: iceData.icePrice, iceFuelPrice: e.target.value, iceConsumption: iceData.iceConsumption })
+    setIceData({ icePrice: iceData.icePrice, iceFuelPrice: e.target.value, iceConsumption: iceData.iceConsumption });
   };
   const handleICEConsumption = (e) => {
-    setIceData({ icePrice: iceData.icePrice, iceFuelPrice: iceData.iceFuelPrice, iceConsumption: e.target.value })
+    setIceData({ icePrice: iceData.icePrice, iceFuelPrice: iceData.iceFuelPrice, iceConsumption: e.target.value });
   };
 
-  const [ mileageData, setMileage ] = useState({ mileage: '' });
+  const [mileageData, setMileage] = useState({ mileage: '' });
   const handleMileage = (e) => {
-    setMileage({ mileage: e.target.value })
+    setMileage({ mileage: e.target.value });
   };
-
 
   const evFuelCost100km = evData.evFuelPrice * 16;
-  const evFuelCostyear = mileageData.mileage * evData.evFuelPrice * evData.evConsumption/100;
+  const evFuelCostyear = mileageData.mileage * evData.evFuelPrice * evData.evConsumption / 100;
   const iceFuelCost100km = iceData.iceFuelPrice * 6.5;
-  const iceFuelCostyear = mileageData.mileage * iceData.iceFuelPrice * iceData.iceConsumption/100;
+  const iceFuelCostyear = mileageData.mileage * iceData.iceFuelPrice * iceData.iceConsumption / 100;
 
-  let saving = Math.round(iceFuelCostyear - evFuelCostyear)
-    if (Math.sign(saving) === -1) saving = 'A megtakarítás 0';
-  
-
+  let saving = Math.round(iceFuelCostyear - evFuelCostyear);
+  if (Math.sign(saving) === -1) saving = 'A megtakarítás 0';
 
   let timespan = 0;
-    if (evFuelCost100km > 0) {
-      timespan = Math.round((evData.evPrice - iceData.icePrice) / (iceFuelCostyear - evFuelCostyear));
-    }
+  if (evFuelCost100km > 0) {
+    timespan = Math.round((evData.evPrice - iceData.icePrice) / (iceFuelCostyear - evFuelCostyear));
+  }
 
   return (
     <div className='evcalc-wrapper'>
@@ -54,9 +51,9 @@ function EVcalc() {
         <p>Az időszakot lerövidítheti:</p>
         <li>otthoni napelemes rendszeről való töltés, amivel az üzemanyagköltség 0Ft/kW köré süllyedhet;</li>
         <li>a minnél nagyobb éves futásteljesítmény.</li>
-        <p></p>
-        <p></p>
-        <p></p>
+        <p />
+        <p />
+        <p />
 
       </div>
       <div className='evcalc-main'>
@@ -90,7 +87,7 @@ function EVcalc() {
         <Button className='ice-fuel-cost-yearly to-center' textContent={iceFuelCostyear + ' Ft/év'} />
 
         <textarea className='mileage-merged' value={mileageData.mileage} onChange={handleMileage} placeholder='pl. 25.000km' />
-        <p className='mileage-merged-km' >km</p>
+        <p className='mileage-merged-km'>km</p>
         <Button className='saving to-center' textContent={saving + ' Ft/év'} />
         <Button className='timespan to-center' textContent={timespan + ' év'} />
 
