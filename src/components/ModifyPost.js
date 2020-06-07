@@ -5,7 +5,7 @@ import Button from './Button';
 function ModifyPost ({ id, postTitle, postContent, settingTheView, getPost }) {
   async function editPost () {
     try {
-      const url = 'https://chargeport-backend.herokuapp.com' || 'http://localhost:8080';
+      const url = 'http://localhost:8080';
       const fetchResponse = await fetch(`${url}/api/post/modify/${id}`, {
         method: 'PUT',
         headers: { 'Content-type': 'application/json' },
