@@ -20,6 +20,10 @@ function Subscription () {
         alert('Kérlek add meg az e-mail címedet');
         return false;
       }
+      if (subscriptionData.email.indexOf('@') === -1) {
+        alert('Helytelen e-mail cím');
+        return false;
+      }
       setData({ name: '', email: '' });
       alert('E-mail elküldve');
       return data;
@@ -42,8 +46,8 @@ function Subscription () {
     <div className='subscription-wrapper'>
       <p>Feliratkozás a hírlevélre</p>
       <form className='subscription'>
-        <input value={subscriptionData.name} onChange={handleName} type='text' placeholder='Név' />
-        <input value={subscriptionData.email} onChange={handleEmail} type='email' placeholder='E-mail cím' />
+        <input type='text' value={subscriptionData.name} onChange={handleName} placeholder='Név' />
+        <input type='email' value={subscriptionData.email} onChange={handleEmail} placeholder='E-mail cím' />
         <Button className='subscribe-button' textContent='Feliratkozás' onClick={subscribe} />
       </form>
     </div>
