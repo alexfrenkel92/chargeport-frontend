@@ -46,12 +46,12 @@
 
 .price.evcalc {
     grid-column: 1 / 2;
-    grid-row: 2 / 3;
+    grid-row: 3 / 4;
 }
 
 .mileage.evcalc {
     grid-column: 1 / 2;
-    grid-row: 3 / 4;
+    grid-row: 2 / 3;
 }
 
 .fuel-cost.evcalc {
@@ -86,13 +86,13 @@
 
 .ev-price {
     grid-column: 2 / 3;
-    grid-row: 2 / 3;
+    grid-row: 3 / 4;
     width: 120px;
 }
 
 .ev-price-Ft {
     grid-column: 2 / 3;
-    grid-row: 2 / 3;
+    grid-row: 3 / 4;
     justify-self: right;
     align-self: center;
     padding-right: 35px;
@@ -100,13 +100,13 @@
 
 .ice-price {
     grid-column: 3 / 4;
-    grid-row: 2 / 3;
+    grid-row: 3 / 4;
     width: 120px;
 }
 
 .ice-price-Ft {
     grid-column: 3 / 4;
-    grid-row: 2 / 3;
+    grid-row: 3 / 4;
     justify-self: right;
     align-self: center;
     padding-right: 35px;
@@ -114,17 +114,17 @@
 
 .mileage-merged {
     grid-column: 2 / 4;
-    grid-row: 3 / 4;
+    grid-row: 2 / 3;
     width: 120px;
 }
 
 .mileage-merged-km {
     grid-column: 3 / 4;
-    grid-row: 3 / 4;
+    grid-row: 2 / 3;
     align-self: center;
     justify-self: right;
     padding-right: 86px;
-    padding-right: 143px;
+    padding-right: 150px;
 }
 
 .kW-price {
