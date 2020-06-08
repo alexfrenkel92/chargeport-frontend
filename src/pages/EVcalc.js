@@ -35,19 +35,21 @@ function EVcalc () {
   const iceFuelCost100km = iceData.iceFuelPrice * iceData.iceConsumption;
   const iceFuelCostyear = mileageData.mileage * iceData.iceFuelPrice * iceData.iceConsumption / 100;
 
-  function handleSaving() {
+  function handleSaving () {
     let saving = Math.round(iceFuelCostyear - evFuelCostyear);
     if (Math.sign(saving) === -1) saving = 'A megtakarítás 0';
     return saving;
   }
 
-  function handleTimespan() {
+  function handleTimespan () {
     let timespan = 0;
-    if (!evData.evFuelPrice, evData.evConsumption, evData.evPrice) timespan = Math.round((evData.evPrice - iceData.icePrice) / (iceFuelCostyear));
-    if (mileageData.mileage, evData.evPrice, !evData.evConsumption || evData.evConsumption, !evData.evFuelPrice || evData.evFuelPrice) timespan = 0;
-    if (evFuelCost100km > 0) {
+    if (!evFuelCost100km) {
+      timespan = Math.round((evData.evPrice - iceData.icePrice) / (iceFuelCostyear));
+    }
+    if (!mileageData.mileage, !evData.evPrice, !evData.evFuelPrice, !evData.evConsumption, iceData.icePrice, !iceData.iceFuelPrice, !iceData.iceConsumption) timespan = 0;
+    if (evFuelCost100km) {
       timespan = Math.round((evData.evPrice - iceData.icePrice) / (iceFuelCostyear - evFuelCostyear));
-    } 
+    }
     if (Math.sign(timespan) === -1) timespan = '0';
     return timespan;
   }
