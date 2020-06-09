@@ -11,7 +11,7 @@ function RenderPostData ({ id, post_title, post_content, score, getPost }) {
         method: 'PUT',
         headers: { 'Content-type': 'application/json' }
       });
-      getPost();
+      await getPost();
       return;
     } catch (error) {
       return error;
@@ -30,7 +30,7 @@ function RenderPostData ({ id, post_title, post_content, score, getPost }) {
         method: 'PUT',
         headers: { 'Content-type': 'application/json' }
       });
-      getPost();
+      await getPost();
       return;
     } catch (error) {
       return error;
@@ -49,7 +49,7 @@ function RenderPostData ({ id, post_title, post_content, score, getPost }) {
         method: 'DELETE',
         headers: { 'Content-type': 'application/json' }
       });
-      getPost();
+      await getPost();
       return;
     } catch (error) {
       return error;
