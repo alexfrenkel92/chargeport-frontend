@@ -6,8 +6,8 @@ function Footer () {
     <div className='footer'>
       <div className='footer-content'>
         <p>Az oldal hobby projekt, a feltűntetett adatok nem valósak.</p>
+        <p>Előfordulhat, hogy néhány a backend-ről származó adat nem tölt be, pl a Fórum és főoldalon.</p>
         <p>alex.frenkel92@gmail.com</p>
-        <p>2020</p>
       </div>
     </div>
   );
