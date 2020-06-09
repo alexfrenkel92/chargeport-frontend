@@ -29,10 +29,10 @@ function ModifyPost ({ id, postTitle, postContent, settingTheView, getPost }) {
     setData({ post_title: postData.post_title, post_content: e.target.value });
   };
 
-  function handleModifyClick (e) {
+  async function handleModifyClick (e) {
     e.preventDefault();
     editPost();
-    getPost();
+    await getPost();
   }
 
   return (

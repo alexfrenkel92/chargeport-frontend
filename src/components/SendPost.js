@@ -27,10 +27,10 @@ function SendPost ({ getPost }) { // will use getPost as param to rerender the R
     }
   }
 
-  function handleSendPost (e) {
+  async function handleSendPost (e) {
     e.preventDefault();
     sendPost(); // sends the post
-    getPost(); // than rerenders the getPost component
+    await getPost(); // than rerenders the getPost component
   }
 
   const [postData, setPostData] = useState({ post_title: '', post_content: '' });
