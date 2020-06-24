@@ -1,7 +1,0 @@
-.chargeport-install {
-    grid-column: 2 / 3;
-    min-height: calc(100% + 100px);
-    width: 1000px;
-    padding-top: 25px;
-    font-size: normal;
-}

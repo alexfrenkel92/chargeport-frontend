@@ -20,7 +20,7 @@ const images = [
     description: '50kW DC'
   },
   {
-    original: require('../img/bigpic5.png'),
+    original: require('../img/bigpic5.jpg'),
     description: '50kW DC'
   }
 ];

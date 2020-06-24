@@ -16,21 +16,18 @@ function Navbar () {
   function navigateToEVcalc () {
     history.push('/evcalculator');
   }
-  function navigateToInstall () {
-    history.push('/chargeportinstall');
-  }
   function navigateToForum () {
     history.push('/forum');
   }
 
   return (
     <div className='navbar'>
-      <img src={logo} className='logo' alt='market-place-logo' onClick={navigateToHome} />
+      <img src={logo} className='logo' alt='market-place-logo' />
       <div className='buttons'>
-        <Button className='about button' textContent='Rólunk' onClick={navigateToAboutUS} />
-        <Button className='calc button' textContent='EV kalkulátor' onClick={navigateToEVcalc} />
-        <Button className='forum button' textContent='Fórum' onClick={navigateToForum} />
-        <Button className='install button' textContent='Töltőtelepítés' onClick={navigateToInstall} />
+        <Button className='button' textContent='Főoldal' onClick={navigateToHome} />
+        <Button className='button' textContent='Rólunk' onClick={navigateToAboutUS} />
+        <Button className='button' textContent='EV kalkulátor' onClick={navigateToEVcalc} />
+        <Button className='button' textContent='Fórum' onClick={navigateToForum} />
       </div>
     </div>
   );
