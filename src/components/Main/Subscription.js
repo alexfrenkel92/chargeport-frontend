@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import './Subscription.css';
-import Button from './Button';
+import Button from '../Shared/Button';
+import backendUrl from '../../services/backendLink';
 
 function Subscription () {
   async function subscribe () {
     try {
-      const url = 'https://chargeport-backend.herokuapp.com';
-      const fetchResponse = await fetch(`${url}/api/subscription`, {
+      const fetchResponse = await fetch(`${backendUrl}/api/subscription`, {
         method: 'POST',
         headers: { 'Content-type': 'application/json' },
         body: JSON.stringify(subscriptionData)
@@ -44,7 +44,7 @@ function Subscription () {
 
   return (
     <div className='subscription-wrapper'>
-      <p>Feliratkozás a hírlevélre</p>
+      <p className='form-title'>Feliratkozás a hírlevélre</p>
       <form className='subscription'>
         <input type='text' value={subscriptionData.name} onChange={handleName} placeholder='Név' />
         <input type='email' value={subscriptionData.email} onChange={handleEmail} placeholder='E-mail cím' />

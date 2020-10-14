@@ -1,28 +1,27 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+// import { HashRouter as Router, Route } from 'react-router-dom';
+import CacheRoute from 'react-router-cache-route'
 import './App.css';
-import Navbar from './components/Navbar';
+import Navbar from './components/Shared/Navbar';
 import Main from './pages/Main';
 import AboutUs from './pages/AboutUs';
 import EVcalc from './pages/EVcalc';
-// import ChargePortInstall from './pages/ChargePortInstall';
 import Forum from './pages/Forum';
-import Footer from './components/Footer';
+import Footer from './components/Shared/Footer';
+import MarketPlace from './pages/Marketplace';
 
-function App () {
-  return (
-    <BrowserRouter>
-      <div className='App'>
-        <Navbar />
-        <Route exact path='/' component={Main} />
-        <Route path='/aboutus' exact component={AboutUs} />
-        <Route path='/evcalculator' exact component={EVcalc} />
-        {/* <Route path='/chargeportinstall' exact component={ChargePortInstall} /> */}
-        <Route path='/forum' exact component={Forum} />
-        <Footer />
-      </div>
-    </BrowserRouter>
-  );
+function App() {
+    return (
+            <div className='App'>
+                <Navbar />
+                <CacheRoute exact path='/' component={Main} />
+                <CacheRoute path='/aboutus' component={AboutUs} />
+                <CacheRoute path='/evcalculator' component={EVcalc} />
+                <CacheRoute path='/marketplace' component={MarketPlace} />
+                <CacheRoute path='/forum' component={Forum} />
+                <Footer />
+            </div>
+    );
 }
 
 export default App;

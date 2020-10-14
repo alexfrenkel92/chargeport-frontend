@@ -1,0 +1,7 @@
+.render-post-data-header {
+    font-weight: 600;
+    border-left: 5px  #3ba749 solid;
+    padding-left: 15px;
+    margin-top: 10px;
+    height: fit-content;
+}

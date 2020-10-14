@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import './RenderPostData.css';
-import Button from './Button';
+import Button from '../Shared/Button';
 import ModifyPost from './ModifyPost';
+import backendUrl from '../../services/backendLink';
 
 function RenderPostData ({ id, post_title, post_content, score, getPost }) {
   async function upVote () {
     try {
-      const url = 'https://chargeport-backend.herokuapp.com';
-      await fetch(`${url}/api/post/upvote/${id}`, {
+      await fetch(`${backendUrl}/api/post/upvote/${id}`, {
         method: 'PUT',
         headers: { 'Content-type': 'application/json' }
       });
@@ -25,8 +25,7 @@ function RenderPostData ({ id, post_title, post_content, score, getPost }) {
 
   async function downVote () {
     try {
-      const url = 'https://chargeport-backend.herokuapp.com';
-      await fetch(`${url}/api/post/downvote/${id}`, {
+      await fetch(`${backendUrl}/api/post/downvote/${id}`, {
         method: 'PUT',
         headers: { 'Content-type': 'application/json' }
       });
@@ -44,8 +43,7 @@ function RenderPostData ({ id, post_title, post_content, score, getPost }) {
 
   async function deletePost () {
     try {
-      const url = 'https://chargeport-backend.herokuapp.com';
-      await fetch(`${url}/api/post/delete/${id}`, {
+      await fetch(`${backendUrl}/api/post/delete/${id}`, {
         method: 'DELETE',
         headers: { 'Content-type': 'application/json' }
       });
@@ -82,8 +80,8 @@ function RenderPostData ({ id, post_title, post_content, score, getPost }) {
           {post_content}
         </p>
         <div className='post-score-wrapper'>
-          <img className='up vote' src={require('../img/like.png')} onClick={handleUpVote} alt='Upvote' />
-          <img className='down vote' src={require('../img/dislike.png')} onClick={handleDownVote} alt='Downvote' />
+          <img className='up vote' src={require('../../img/like.png')} onClick={handleUpVote} alt='Upvote' />
+          <img className='down vote' src={require('../../img/dislike.png')} onClick={handleDownVote} alt='Downvote' />
           <p className='render-post-score'>
             {score}
           </p>

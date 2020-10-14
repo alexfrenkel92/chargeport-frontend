@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import './SendPost.css';
-import Button from '../components/Button';
+import Button from '../Shared/Button';
+import backendUrl from '../../services/backendLink';
 
 function SendPost ({ getPost }) { // will use getPost as param to rerender the RenderPost when new post is sent
   async function sendPost () {
     try {
-      const url = 'https://chargeport-backend.herokuapp.com';
-      const fetchResponse = await fetch(`${url}/api/post`, {
+      const fetchResponse = await fetch(`${backendUrl}/api/post`, {
         method: 'POST',
         headers: { 'Content-type': 'application/json' },
         body: JSON.stringify(postData)
@@ -29,8 +29,8 @@ function SendPost ({ getPost }) { // will use getPost as param to rerender the R
 
   async function handleSendPost (e) {
     e.preventDefault();
-    sendPost(); // sends the post
-    await getPost(); // than rerenders the getPost component
+    sendPost();
+    await getPost();
   }
 
   const [postData, setPostData] = useState({ post_title: '', post_content: '' });

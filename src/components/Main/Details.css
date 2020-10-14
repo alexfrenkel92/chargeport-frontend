@@ -1,8 +1,3 @@
-* {
-    margin: 0;
-    grid-column: 1 / 4;
-}
-
 .details {
     display: flex;
     flex-direction: column;
@@ -12,7 +7,6 @@
 
 .details-title {
     margin: 10px 0 10px 0;
-    font-size: 13px;
     font-size: medium;
 }
 
@@ -23,6 +17,7 @@
 
 .details-content > p {
     padding-top: 10px;
+    margin: 3px;
 }
 
 .bullet-points {

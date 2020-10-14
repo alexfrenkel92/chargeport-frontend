@@ -1,11 +1,9 @@
 .consumption-wrapper {
-    grid-column: 4 / 7;
-    grid-row: 2 / 3;
     display: grid;
     grid-template-columns: 130px repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     height: 250px;
-    /* margin-top: -10px; */
+    padding-top: 10px;
 }
 
 .ac36 {
@@ -50,19 +48,19 @@
 .ac36img {
     grid-column: 2 / 3;
     grid-row: 1 / 1;
-    width: 50%;
+    width: 40%;
 }
 
 .ac22img {
     grid-column: 3 / 4;
     grid-row: 1 / 1;
-    width: 48%;
+    width: 38%;
 }
 
 .dc50img {
     grid-column: 4 / 5;
     grid-row: 1 / 1;
-    width: 55%;
+    width: 45%;
 }
 
 .img {

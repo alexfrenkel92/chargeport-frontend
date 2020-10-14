@@ -1,10 +1,10 @@
 import React from 'react';
 import './Forum.css';
-import RenderPost from '../components/RenderPost';
+import RenderPost from '../components/Forum/RenderPost';
 
 function Forum () {
   return (
-    <div className='forum-page'>
+    <div className="forumPage">
       <RenderPost />
     </div>
   );

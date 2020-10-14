@@ -4,23 +4,23 @@ import './Gallery.css';
 
 const images = [
   {
-    original: require('../img/bigpic3.jpg'),
+    original: require('../../img/bigpic3.jpg'),
     description: '3.6kW AC'
   },
   {
-    original: require('../img/bigpic1.jpg'),
+    original: require('../../img/bigpic1.jpg'),
     description: '22kW AC'
   },
   {
-    original: require('../img/bigpic2.jpg'),
+    original: require('../../img/bigpic2.jpg'),
     description: '22kW AC'
   },
   {
-    original: require('../img/bigpic4.jpg'),
+    original: require('../../img/bigpic4.jpg'),
     description: '50kW DC'
   },
   {
-    original: require('../img/bigpic5.jpg'),
+    original: require('../../img/bigpic5.jpg'),
     description: '50kW DC'
   }
 ];

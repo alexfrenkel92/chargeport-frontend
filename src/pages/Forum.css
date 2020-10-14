@@ -1,8 +1,4 @@
-.forum-page {
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
-    margin: 0 auto 100px auto;
-    height: 100%;
-    width: 1000px;
-    padding-top: 15px;
+.forumPage {
+    padding: 20px 5px 0 5px;
+    min-height: calc(100vh - 100px);
 }

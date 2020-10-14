@@ -1,9 +1,7 @@
 .player-wrapper {
-    grid-column: 4 / 7;
-    grid-row: 1 / 2;
     width: 100%;
     align-self: center;
-    padding-top: 55px;
+    padding-top: 10px;
 }
 
 .player-text {

@@ -1,22 +1,21 @@
 .evcalc-wrapper {
-    height: 610px;
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
-    /* min-height: calc(100% + 60px); */
-    padding: 10px 0;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows:  190px 500px;
+    /* padding: 30px 30px 0 40px; */
+    min-height: calc(100vh - 110px);
+    margin-bottom: 10px;
 }
 
-.evcalc-main {
-    grid-column: 2 / 3;
-    justify-items: center;
-    display: grid;
-    grid-gap: 5px;
-    width: fit-content;
-    grid-template-columns: 150px repeat(2, 238px);
-    grid-template-rows: repeat(9, 40px);
+.evcalc-wrapper p {
+    margin: 10px 0 3px 0;
+}
+
+.evcalc-details-title {
+    padding: 30px 20px 20px 20px;
+    margin: 0;
+    text-align: justify;
+}
+
+.calculator {
+    margin-top: 20px;
 }
 
 .evcalc-text > p {
@@ -31,202 +30,67 @@
 }
 
 .titleEV {
-    grid-column: 2 / 3;
-    text-align: center;
     font-weight: 600;
-    align-self: center;
+    text-align: center;
+    padding-left: 330px;
 }
 
 .titleICE {
-    grid-column: 3 / 4;
-    text-align: center;
     font-weight: 600;
-    align-self: center;
-}
-
-.price.evcalc {
-    grid-column: 1 / 2;
-    grid-row: 3 / 4;
-}
-
-.mileage.evcalc {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
-}
-
-.fuel-cost.evcalc {
-    grid-column: 1 / 2;
-    grid-row: 4 / 5;
-}
-
-.consumption.evcalc {
-    grid-column: 1 / 2;
-    grid-row: 5 / 6;
-}
-
-.fuel-cost-100km.evcalc {
-    grid-column: 1 / 2;
-    grid-row: 6 / 7;
-}
-
-.year-mileage.evcalc {
-    grid-column: 1 / 2;
-    grid-row: 7 / 8;
-}
-
-.difference.evcalc {
-    grid-column: 1 / 2;
-    grid-row: 8 / 9;
-}
-
-.duration.evcalc {
-    grid-column: 1 / 2;
-    grid-row: 9 / 10;
+    text-align: center;
 }
 
 .ev-price {
-    grid-column: 2 / 3;
-    grid-row: 3 / 4;
-    width: 120px;
-}
-
-.ev-price-Ft {
-    grid-column: 2 / 3;
-    grid-row: 3 / 4;
-    justify-self: right;
-    align-self: center;
-    padding-right: 35px;
-}
-
-.ice-price {
-    grid-column: 3 / 4;
-    grid-row: 3 / 4;
-    width: 120px;
-}
-
-.ice-price-Ft {
-    grid-column: 3 / 4;
-    grid-row: 3 / 4;
-    justify-self: right;
-    align-self: center;
-    padding-right: 35px;
+    width: 150px;
 }
 
 .mileage-merged {
-    grid-column: 2 / 4;
-    grid-row: 2 / 3;
-    width: 120px;
-}
-
-.mileage-merged-km {
-    grid-column: 3 / 4;
-    grid-row: 2 / 3;
-    align-self: center;
-    justify-self: right;
-    padding-right: 86px;
-    padding-right: 150px;
+    width: 150px;
 }
 
 .kW-price {
-    grid-column: 2 / 3;
-    grid-row: 4 / 5;
-    width: 80px;
-}
-
-.kW-price-Ft {
-    grid-column: 2 / 3;
-    grid-row: 4 / 5;
-    justify-self: right;
-    align-self: center;
-    font-size: smaller;
-    padding-right: 28px;
+    width: 150px;
 }
 
 .l-price {
-    grid-column: 3 / 4;
-    grid-row: 4 / 5;
-    width: 80px;
-}
-
-.l-price-Ft {
-    grid-column: 3 / 4;
-    grid-row: 4 / 5;
-    justify-self: right;
-    padding-right: 17px;
-    align-self: center;
-    font-size: smaller;
-    padding-right: 46px;
+    width: 150px;
 }
 
 .consumption-ev {
-    grid-column: 2 / 3;
-    grid-row: 5 / 6;
-    width: 80px;
-}
-
-.consumption.ev-kw {
-    grid-column: 2 / 3;
-    grid-row: 5 / 6;
-    justify-self: right;
-    align-self: center;
-    font-size: smaller;
-    /* padding-right: 0px; */
+    width: 150px;
 }
 
 .consumption-ice {
-    grid-column: 3 / 4;
-    grid-row: 5 / 6;
-    width: 80px;
-}
-
-.consumption.ice-l {
-    grid-column: 3 / 4;
-    grid-row: 5 / 6;
-    justify-self: right;
-    align-self: center;
-    font-size: smaller;
-    padding-right: 15px;
+    width: 150px;
 }
 
 .ev-fuel-cost-100km {
-    grid-column: 2 / 3;
-    grid-row: 6 / 7;
     background: none;
     border: 0;
 }
 
 .ice-fuel-cost-100km {
-    grid-column: 3 / 4;
-    grid-row: 6 / 7;
     background: none;
     border: 0;
 }
 
 .ev-fuel-cost-yearly {
-    grid-column: 2 / 3;
-    grid-row: 7 / 8;
     background: none;
     border: 0;
 }
 
 .ice-fuel-cost-yearly {
-    grid-column: 3 / 4;
-    grid-row: 7 / 8;
     background: none;
     border: 0;
 }
 
 .saving {
-    grid-column: 2 / 4;
-    grid-row: 8 / 9;
     font-weight: 600;
     background: none;
     border: 0;
 }
 
 .timespan {
-    grid-column: 2 / 4;
-    grid-row: 9 / 10;
     font-weight: 600;
     background: none;
     border: 0;
@@ -246,14 +110,31 @@
 }
 
 textarea {
-    height: 20px;
+    height: 25px;
     text-align: center;
     justify-self: center;
     align-self: center;
-    padding: 3px 0 3px 0;
     font-size: 14px;
     resize: none;
     white-space: nowrap;
     border-radius: 5px;
     border: 2px #3ba749 solid;
+}
+
+@media only screen and (max-width: 991px) {
+    .row {
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-between; */
+    }
+    .col {
+        text-align: center;
+    }
+    .row.calculator {
+        /* background-color: lightcoral; */
+        flex-direction: row;
+    }
+    .titleEV {
+        padding-left: 0;
+    }
 }

@@ -9,8 +9,3 @@ body {
     background-color: rgb(250, 251, 248);
     overflow-y: scroll; /* prevents site's shifting because of scrollbar apper */
   }
-
-.App {
-    display: grid;
-    grid-template-columns: 1fr 1000px 1fr;
-}

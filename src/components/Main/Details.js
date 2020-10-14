@@ -4,9 +4,9 @@ import './Details.css';
 function Details () {
   return (
     <article className='details'>
-      <div className='details-title'>
+      {/* <div className='details-title'>
         <h3>Köszöntünk az oldalon!</h3>
-      </div>
+      </div> */}
       <div className='details-content'>
         <p>Az ChargePort Zrt. elsődleges küldetése a felhasználók számára komfortos szolgáltatást biztosító töltőhálózat kialakítása, olyan országos infrastruktúra felépítése, mely hosszútávon képes hatékonyan működni, fejlődni.</p>
         <p>A töltőhálózat fejlesztésének legfontosabb hatása, hogy elősegíti az elektromos gépjárművek használói körének bővülését, mivel egyre több potenciális érdeklődő számára válik elérhetővé a közlekedés ezen új, környezettudatos formája.</p>

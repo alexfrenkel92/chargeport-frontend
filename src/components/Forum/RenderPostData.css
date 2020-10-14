@@ -71,3 +71,8 @@
     transition: 0.2s;
     cursor: pointer;
 }
+.post-button:active { 
+    outline: 0 !important;
+    transform: translateY(2px);
+    transition-timing-function: ease;
+}
