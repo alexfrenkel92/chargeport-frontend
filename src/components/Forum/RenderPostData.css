@@ -31,7 +31,12 @@
 .down.vote {
     grid-column: 3 / 4;
 }
-
+.up.vote:active,
+.down.vote:active { 
+    outline: 0 !important;
+    transform: translateY(2px);
+    transition-timing-function: ease;
+}
 .vote {
     height: 20px;
     justify-self: center;
@@ -75,4 +80,8 @@
     outline: 0 !important;
     transform: translateY(2px);
     transition-timing-function: ease;
+}
+.post-button:focus,
+.delete.post-button { 
+    outline: 0 !important;
 }

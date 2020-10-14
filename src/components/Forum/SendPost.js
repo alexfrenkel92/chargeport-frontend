@@ -45,7 +45,7 @@ function SendPost ({ getPost }) { // will use getPost as param to rerender the R
 
   return (
     <div>
-      <textarea className='send-post title' value={postData.post_title} onChange={handlePostTitle} placeholder='Poszt címe' />
+      <textarea rows="10" cols="45" style={{overflow:"hidden", resize: "none"}} className='send-post title' value={postData.post_title} onChange={handlePostTitle} placeholder='Poszt címe' />
       <textarea className='send-post content' value={postData.post_content} onChange={handlepostData} placeholder='Poszt tartalma' />
       <Button className='send-post-button' textContent='Megosztás' onClick={handleSendPost} />
     </div>

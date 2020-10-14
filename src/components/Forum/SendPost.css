@@ -18,7 +18,7 @@
     height: 40px;
 }
 .send-post.content {
-    height: 75px;
+    height: 100px;
 }
 .send-post-button {
     border-radius: 5px;
@@ -41,4 +41,7 @@
     outline: 0 !important;
     transform: translateY(2px);
     transition-timing-function: ease;
+}
+.send-post-button:focus { 
+    outline: 0 !important;
 }
