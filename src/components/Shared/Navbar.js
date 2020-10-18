@@ -21,6 +21,9 @@ function Navbar() {
   function navigateToMarketplace() {
     history.push('/marketplace')
   }
+  function navigateToCart() {
+    history.push('/cart')
+  }
 
   return (
     <nav className="navbar sticky-top navbar-expand-lg navbar-light bg-light">
@@ -41,6 +44,9 @@ function Navbar() {
           </li>
           <li className="nav-item active">
             <a className="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" onClick={navigateToMarketplace}>Piactér</a>
+          </li>
+          <li className="nav-item active">
+            <a className="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" onClick={navigateToCart}>My Cart</a>
           </li>
           <li className="nav-item active">
             <a className="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" onClick={navigateToAboutUS}>Rólunk</a>

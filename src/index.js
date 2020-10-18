@@ -1,21 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
-import { CacheSwitch } from 'react-router-cache-route'
+import { CacheSwitch } from 'react-router-cache-route';
+import { Provider } from 'react-redux';
 
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import store from './store/store';
 
-ReactDOM.render(
-  <React.StrictMode>
+
+const app = (
+  <Provider store={store}>
     <BrowserRouter>
-    <CacheSwitch>
-      <App />
+      <CacheSwitch>
+        <App />
       </CacheSwitch>
     </BrowserRouter>
-  </React.StrictMode>,
-  document.getElementById('root')
+  </Provider>
+)
+
+ReactDOM.render(app, document.getElementById('root')
 );
 
 // If you want your app to work offline and load faster, you can change

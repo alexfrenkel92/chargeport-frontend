@@ -35,7 +35,6 @@
     background-color: #3ba749;
     color: white;
     transition: 0.2s;
-    cursor: pointer;
 }
 .send-post-button:active { 
     outline: 0 !important;
