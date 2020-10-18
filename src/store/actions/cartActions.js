@@ -1,7 +1,6 @@
 import * as actionTypes from './actionTypes';
 
 export const addToCart = (items, product) => (dispatch) => {
-    // const cartItems = items.slice();
     const cartItems = [ ...items ];
     let productAlradyInCart = false;
     cartItems.forEach(item => {

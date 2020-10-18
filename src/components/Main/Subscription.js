@@ -46,8 +46,8 @@ function Subscription () {
     <div className='subscription-wrapper'>
       <p className='form-title'>Feliratkozás a hírlevélre</p>
       <form className='subscription'>
-        <input type='text' value={subscriptionData.name} onChange={handleName} placeholder='Név' />
-        <input type='email' value={subscriptionData.email} onChange={handleEmail} placeholder='E-mail cím' />
+        <input type='text' name='name' value={subscriptionData.name} onChange={handleName} placeholder='Név' />
+        <input type='email' name='email' value={subscriptionData.email} onChange={handleEmail} placeholder='E-mail cím' />
         <Button className='subscribe-button' textContent='Feliratkozás' onClick={subscribe} />
       </form>
     </div>

@@ -1,0 +1,32 @@
+.formWrapper {
+    display: flex;
+    flex-direction: column;
+}
+.formWrapper p {
+    margin: 15px 5px 5px 0;
+}
+.finishOrderButton {
+    margin-top: 20px;
+    border-radius: 5px;
+    outline: 0;
+    border: 1px rgba(128, 149, 129, 0.503) solid;
+    font-size: medium;
+    font-weight: 550;
+    color: rgb(6, 50, 7);
+    width: 150px;
+    height: 30px;
+}
+.finishOrderButton:hover {
+    background-color: #3ba749;
+    color: white;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.finishOrderButton:active { 
+    outline: 0 !important;
+    transform: translateY(2px);
+    transition-timing-function: ease;
+}
+.finishOrderButton:focus { 
+    outline: 0 !important;
+}

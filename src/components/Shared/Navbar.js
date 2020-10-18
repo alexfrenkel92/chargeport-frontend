@@ -46,7 +46,7 @@ function Navbar() {
             <a className="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" onClick={navigateToMarketplace}>Piactér</a>
           </li>
           <li className="nav-item active">
-            <a className="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" onClick={navigateToCart}>My Cart</a>
+            <a className="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" onClick={navigateToCart}>My Orders</a>
           </li>
           <li className="nav-item active">
             <a className="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" onClick={navigateToAboutUS}>Rólunk</a>

@@ -1,0 +1,14 @@
+.modalWrapper {
+    background-color: rgb(243, 250, 239);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px #ccc;
+    padding: 20px;
+    width: fit-content;
+    margin: auto;
+    margin-top: 200px;
+    box-sizing: border-box;
+    transition: all 0.3s ease-out;
+}
+
+
