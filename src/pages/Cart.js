@@ -1,11 +1,13 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { connect } from "react-redux";
 import { removeFromCart } from "../store/actions/cartActions";
 import { postOrders } from '../store/actions/ordersAction';
+import { fetchOrders } from '../store/actions/ordersAction';
 import Button from '../components/Shared/Button';
 import classes from './Cart.module.css';
 import Modal from '../components/Modal/Modal';
 import CheckoutForm from '../components/CheckoutForm/CheckoutForm';
+import Orders from '../components/Orders/Orders';
 
 const Cart = (props) => {
 
@@ -37,6 +39,11 @@ const Cart = (props) => {
             />
         </div>
 
+    useEffect(() => {
+        props.fetchOrders()
+    }, [])
+        
+
     return (
         <div>
             <div className={`${classes.cartWrapper} container`}>
@@ -52,7 +59,8 @@ const Cart = (props) => {
                                 <img src={require(`../img/${product.name}.jpg`)} alt={product.name} style={{ width: '100%' }}></img>
                                 <h1>{product.name}</h1>
                                 <p> Qty: {product.count}</p>
-                                <p> Price: {product.price * product.count}$</p>
+                                <p> Unit price: {product.price}$</p>
+                                <p> Price price: {product.price * product.count}$</p>
                                 <Button
                                     className={classes.cartProductRemoveButton}
                                     textContent='Remove from Cart'
@@ -63,6 +71,7 @@ const Cart = (props) => {
                     </div>
                 )}
                 {cartContent}
+                <Orders fetchOrders={props.fetchOrders} />
             </div>
             <Modal
                 isOpen={showModal}
@@ -75,7 +84,7 @@ const Cart = (props) => {
 }
 
 const mapStateToProps = (state) => ({
-    cartItems: state.cart.items
+    cartItems: state.cart.items,
 })
 
-export default connect(mapStateToProps, { removeFromCart, postOrders })(Cart);
+export default connect(mapStateToProps, { removeFromCart, postOrders, fetchOrders })(Cart);

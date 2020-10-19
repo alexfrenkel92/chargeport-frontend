@@ -40,6 +40,8 @@ const CheckoutForm = (props) => {
         } else {
             alert('Please fill all fields')
         }
+        localStorage.clear()
+        window.location.reload()
     }
 
     return (

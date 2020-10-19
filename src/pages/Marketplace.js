@@ -17,7 +17,7 @@ const Marketplace = (props) => {
 
     useEffect(() => {
         props.fetchProducts()
-    }, [props.fetchProducts])
+    }, [])
 
     let productComponent = null;
     if (props.fetchedProducts) {

@@ -1,22 +1,33 @@
 import * as actionTypes from './actionTypes';
+import backendUrl from '../../services/backendLink';
 
 const axios = require('axios');
 
 export const postOrders = (cartItems) => {
     return dispatch => {
-        axios.post(`https://chargeport-a2d28.firebaseio.com/orders.json`, {
+        axios.post(`${backendUrl}/api/orders`, {
             cartItems
         })
             .then(response => {
                 dispatch({
-                    type: actionTypes.ORDER_PRODUCTS,
-                    payload: response.data
+                    type: actionTypes.POST_ORDER,
+                    payload: response
                 })
-                localStorage.clear()
-                window.location.reload()
             })
             .catch(error => {
                 console.log('Error in ordersAction.js: ' + error)
+            })
+    }
+}
+
+export const fetchOrders = () => {
+    return dispatch => {
+        axios.get(`${backendUrl}/api/orders`)
+            .then(response => {
+                dispatch({
+                    type: actionTypes.FETCH_ORDERS,
+                    payload: response.data
+                })
             })
     }
 }

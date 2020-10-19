@@ -3,7 +3,6 @@ import './Consumption.css';
 import ConsumptionData from './ConsumptionData';
 import backendUrl from '../../services/backendLink';
 
-
 function Consumption () {
   const [consumptionAC36, setConsumptionAC36] = useState([]);
   async function getConsumptionAC36 () {

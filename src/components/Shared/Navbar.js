@@ -34,22 +34,22 @@ function Navbar() {
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav ml-auto">
           <li className="nav-item active">
-            <a className="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" onClick={navigateToHome}>Főoldal</a>
+            <p className="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" onClick={navigateToHome}>Főoldal</p>
           </li>
           <li className="nav-item active">
-            <a className="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" onClick={navigateToEVcalc}>EV kalkulátor</a>
+            <p className="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" onClick={navigateToEVcalc}>EV kalkulátor</p>
           </li>
           <li className="nav-item active">
-            <a className="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" onClick={navigateToForum}>Fórum</a>
+            <p className="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" onClick={navigateToForum}>Fórum</p>
           </li>
           <li className="nav-item active">
-            <a className="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" onClick={navigateToMarketplace}>Piactér</a>
+            <p className="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" onClick={navigateToMarketplace}>Piactér</p>
           </li>
           <li className="nav-item active">
-            <a className="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" onClick={navigateToCart}>My Orders</a>
+            <p className="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" onClick={navigateToCart}>My Orders</p>
           </li>
           <li className="nav-item active">
-            <a className="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" onClick={navigateToAboutUS}>Rólunk</a>
+            <p className="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" onClick={navigateToAboutUS}>Rólunk</p>
           </li>
         </ul>
       </div>
