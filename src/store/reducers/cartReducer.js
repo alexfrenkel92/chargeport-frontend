@@ -1,6 +1,14 @@
 import * as actionTypes from '../actions/actionTypes';
 
-const reducer = (state = {}, action) => {
+const cartItems = localStorage.getItem("cartItems")
+    ? JSON.parse(localStorage.getItem("cartItems"))
+    : [];
+
+let initialState = {
+    items: cartItems
+}; 
+
+const reducer = (state = initialState, action) => {
     switch (action.type) {
         case actionTypes.ADD_TO_CART:
             return {
@@ -12,8 +20,8 @@ const reducer = (state = {}, action) => {
                 ...state,
                 items: action.payload.cartItems
             }
-            default:
-                return state
+        default:
+            return state
     }
 }
 

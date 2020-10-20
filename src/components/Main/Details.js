@@ -8,9 +8,11 @@ function Details () {
         <h3>Köszöntünk az oldalon!</h3>
       </div> */}
       <div className='details-content'>
-        <p>Az ChargePort Zrt. elsődleges küldetése a felhasználók számára komfortos szolgáltatást biztosító töltőhálózat kialakítása, olyan országos infrastruktúra felépítése, mely hosszútávon képes hatékonyan működni, fejlődni.</p>
-        <p>A töltőhálózat fejlesztésének legfontosabb hatása, hogy elősegíti az elektromos gépjárművek használói körének bővülését, mivel egyre több potenciális érdeklődő számára válik elérhetővé a közlekedés ezen új, környezettudatos formája.</p>
-        <p>Cégünk az alábbi 3 típusú utcai töltő telepítésével foglalkozik:</p>
+        <p>In the future more and more electriv vehicles will be cruising in our cities and on our roads. 
+          The future of transport is electric and electric transport needs great charging infrastructure.</p>
+        <p>At Chargeport we help you to make that infrastructure possible by providing you with everything 
+          you need to offer a seamless charging experience at your home or to your customers. When everything works together, EV charging is better for everyone.</p>
+        <p>Most networks offer a mix of slow, fast and rapid charging options, categorized in 3 levels:</p>
         <div className='bullet-points'>
           <li>3.6kW AC - Level 1</li>
           <li>22kW AC - Level 2</li>

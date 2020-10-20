@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router';
 import './CheckoutForm.css';
 import Button from '../Shared/Button';
 
 const CheckoutForm = (props) => {
+
+    const history = useHistory();
 
     const [input, setInput] = useState({
         name: '',
@@ -31,17 +34,19 @@ const CheckoutForm = (props) => {
         return formIsValid;
     }
 
+    function navigateOrders() {
+        history.push('./orders')
+    }
+
     const handleSubmit = (e) => {
         e.preventDefault();
         if (handleValidation()) {
-            console.log(input)
             props.handleSendOrder();
-            alert('Order sent')
+            localStorage.removeItem("cartItems")
+            navigateOrders()
         } else {
             alert('Please fill all fields')
         }
-        localStorage.clear()
-        window.location.reload()
     }
 
     return (
@@ -52,7 +57,6 @@ const CheckoutForm = (props) => {
                 <input
                     name='name'
                     value={input.name}
-                    // required
                     placeholder='Name'
                     onChange={handleName}
                 />
@@ -62,7 +66,6 @@ const CheckoutForm = (props) => {
                 <input
                     name='city'
                     value={input.city}
-                    // required
                     placeholder='City'
                     onChange={handleCity}
                 />
@@ -80,7 +83,7 @@ const CheckoutForm = (props) => {
             <Button
                 className='finishOrderButton'
                 onClick={handleSubmit}
-                textContent='Finish Order' />
+                textContent='Place Order' />
         </form>
     )
 }

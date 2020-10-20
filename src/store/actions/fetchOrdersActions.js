@@ -3,15 +3,15 @@ import backendUrl from '../../services/backendLink';
 
 const axios = require('axios');
 
-export const fetchProducts = () => {
+export const fetchOrders = () => {
     return dispatch => {
-        axios.get(`${backendUrl}/api/products`)
+        axios.get(`${backendUrl}/api/orders`)
             .then(response => {
+                console.log(response.data)
                 dispatch({
-                    type: actionTypes.FETCH_PRODUCTS,
+                    type: actionTypes.FETCH_ORDERS,
                     payload: response.data
                 })
-                localStorage.setItem('products', JSON.stringify(response.data))
             })
     }
 }

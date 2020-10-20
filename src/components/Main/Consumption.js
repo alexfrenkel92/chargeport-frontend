@@ -57,8 +57,8 @@ function Consumption () {
       <p className='kw ac36'>AC 3.6kW</p>
       <p className='kw ac22'>AC 22kW</p>
       <p className='kw dc50'>DC 50kW</p>
-      <p className='text daily'>Átadott villamos energia ma:</p>
-      <p className='text weekly'>Átadott villamos energia utóbbi 7 napban:</p>
+      <p className='text daily'>Electricity consumption today:</p>
+      <p className='text weekly'>Electricity consumption for the previous 7 days:</p>
       <img src={require('../../img/charger4.png')} className='ac36img img' alt='ac36img' />
       <img src={require('../../img/charger2.png')} className='ac22img img' alt='ac22img' />
       <img src={require('../../img/charger1.png')} className='dc50img img' alt='dc50img' />

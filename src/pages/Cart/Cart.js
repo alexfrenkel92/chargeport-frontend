@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { connect } from "react-redux";
-import { removeFromCart } from "../store/actions/cartActions";
-import { postOrders } from '../store/actions/ordersAction';
-import { fetchOrders } from '../store/actions/ordersAction';
-import Button from '../components/Shared/Button';
+import { removeFromCart } from "../../store/actions/cartActions";
+import { emptyCart } from "../../store/actions/cartActions";
+import { postOrders } from '../../store/actions/ordersAction';
+import { fetchOrders } from '../../store/actions/fetchOrdersActions';
+import Button from '../../components/Shared/Button';
 import classes from './Cart.module.css';
-import Modal from '../components/Modal/Modal';
-import CheckoutForm from '../components/CheckoutForm/CheckoutForm';
-import Orders from '../components/Orders/Orders';
+import Modal from '../../components/Modal/Modal';
+import CheckoutForm from '../../components/CheckoutForm/CheckoutForm';
 
 const Cart = (props) => {
 
@@ -21,6 +21,7 @@ const Cart = (props) => {
     const handleSendOrder = () => {
         setShowModal(false)
         props.postOrders(cartItems)
+        props.emptyCart()
     }
     const { cartItems } = props;
 
@@ -42,7 +43,7 @@ const Cart = (props) => {
     useEffect(() => {
         props.fetchOrders()
     }, [])
-        
+
 
     return (
         <div>
@@ -56,7 +57,7 @@ const Cart = (props) => {
                     <div className={classes.cartContainer}>
                         {cartItems.map(product =>
                             <div className={classes.cartCard} key={product.id}>
-                                <img src={require(`../img/${product.name}.jpg`)} alt={product.name} style={{ width: '100%' }}></img>
+                                <img src={require(`../../img/${product.name}.jpg`)} alt={product.name} style={{ width: '100%' }}></img>
                                 <h1>{product.name}</h1>
                                 <p> Qty: {product.count}</p>
                                 <p> Unit price: {product.price}$</p>
@@ -71,20 +72,21 @@ const Cart = (props) => {
                     </div>
                 )}
                 {cartContent}
-                <Orders fetchOrders={props.fetchOrders} />
             </div>
             <Modal
                 isOpen={showModal}
                 onRequestClose={handleCloseModal}
                 className={'modalWrapper'} >
-                <CheckoutForm handleCloseModal={handleCloseModal} handleSendOrder={handleSendOrder}/>
+                <CheckoutForm handleCloseModal={handleCloseModal} handleSendOrder={handleSendOrder} />
             </Modal>
         </div>
     )
 }
 
-const mapStateToProps = (state) => ({
-    cartItems: state.cart.items,
-})
+const mapStateToProps = (state) => {
+    return {
+        cartItems: state.cart.items,
+    }
+}
 
-export default connect(mapStateToProps, { removeFromCart, postOrders, fetchOrders })(Cart);
+export default connect(mapStateToProps, { removeFromCart, postOrders, fetchOrders, emptyCart })(Cart);

@@ -24,6 +24,9 @@ function Navbar() {
   function navigateToCart() {
     history.push('/cart')
   }
+  function navigateOrders() {
+    history.push('./orders')
+  }
 
   return (
     <nav className="navbar sticky-top navbar-expand-lg navbar-light bg-light">
@@ -34,19 +37,24 @@ function Navbar() {
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav ml-auto">
           <li className="nav-item active">
-            <p className="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" onClick={navigateToHome}>Főoldal</p>
+            <p className="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" onClick={navigateToHome}>Homepage</p>
           </li>
           <li className="nav-item active">
-            <p className="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" onClick={navigateToEVcalc}>EV kalkulátor</p>
+            <p className="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" onClick={navigateToEVcalc}>EV calculator</p>
           </li>
           <li className="nav-item active">
-            <p className="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" onClick={navigateToForum}>Fórum</p>
+            <p className="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" onClick={navigateToForum}>Posts</p>
           </li>
-          <li className="nav-item active">
-            <p className="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" onClick={navigateToMarketplace}>Piactér</p>
-          </li>
-          <li className="nav-item active">
-            <p className="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" onClick={navigateToCart}>My Orders</p>
+          <li className="nav-item dropdown">
+            <p className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Marketplace
+            </p>
+            <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+              <p className="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" onClick={navigateToMarketplace}>EV Chargers</p>
+              <p className="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" onClick={navigateToCart}>My Cart</p>
+              <p className="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" onClick={navigateOrders}>My Orders</p>
+              <p className="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show">Login</p>
+            </div>
           </li>
           <li className="nav-item active">
             <p className="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" onClick={navigateToAboutUS}>Rólunk</p>

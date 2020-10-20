@@ -2,28 +2,30 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { useHistory } from 'react-router';
 import classes from './Marketplace.module.css';
-import Products from '../components/Marketplace/Products';
-// import schoku from '../../img/TYPE2-SCHUKO-1F-16A.jpg'
-// import type2132 from '../../img/TYPE2-1F-32A.jpg'
-// import type2332 from '../../img/TYPE2-3F-32A.jpg'
-// import wallbox from '../../img/TYPE2-3F-32A-WALLBOX.jpg';
-import { fetchProducts } from "../store/actions/productActions";
-import { addToCart } from "../store/actions/cartActions";
-import Button from '../components/Shared/Button';
+import Products from '../../components/Marketplace/Products';
+import { fetchProducts } from "../../store/actions/productActions";
+import { addToCart } from "../../store/actions/cartActions";
+import Button from '../../components/Shared/Button';
 
 const Marketplace = (props) => {
 
     const history = useHistory();
 
+
+    let fetchedProducts = localStorage.getItem("products")
+        ? JSON.parse(localStorage.getItem("products"))
+        : props.fetchedProducts
+    
+    
     useEffect(() => {
         props.fetchProducts()
     }, [])
 
     let productComponent = null;
-    if (props.fetchedProducts) {
+    if (fetchedProducts) {
         productComponent = (
             <Products
-                products={props.fetchedProducts}
+                products={fetchedProducts}
                 handleAddToCart={props.addToCart}
                 cartItems={props.cartItems}
             />

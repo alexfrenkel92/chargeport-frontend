@@ -9,6 +9,7 @@ export const postOrders = (cartItems) => {
             cartItems
         })
             .then(response => {
+                console.log(cartItems)
                 dispatch({
                     type: actionTypes.POST_ORDER,
                     payload: response
@@ -16,18 +17,6 @@ export const postOrders = (cartItems) => {
             })
             .catch(error => {
                 console.log('Error in ordersAction.js: ' + error)
-            })
-    }
-}
-
-export const fetchOrders = () => {
-    return dispatch => {
-        axios.get(`${backendUrl}/api/orders`)
-            .then(response => {
-                dispatch({
-                    type: actionTypes.FETCH_ORDERS,
-                    payload: response.data
-                })
             })
     }
 }

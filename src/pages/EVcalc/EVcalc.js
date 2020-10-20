@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './EVcalc.css';
-import Button from '../components/Shared/Button';
+import Button from '../../components/Shared/Button';
 
 function EVcalc() {
   const [evData, setEvData] = useState({ evPrice: '', evFuelPrice: '', evConsumption: '' });

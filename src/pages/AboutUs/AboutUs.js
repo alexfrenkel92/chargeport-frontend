@@ -1,8 +1,8 @@
 import React from 'react';
 import classes from './AboutUs.module.css';
-import reactReduxLogo from '../img/react-redux-logo.png';
-import nodeJsLogo from '../img/nodejs-logo.png';
-import awsLogo from '../img/aws-logo.png';
+import reactReduxLogo from '../../img/react-redux-logo.png';
+import nodeJsLogo from '../../img/nodejs-logo.png';
+import awsLogo from '../../img/aws-logo.png';
 
 function aboutUs() {
   return (

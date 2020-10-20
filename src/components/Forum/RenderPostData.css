@@ -53,12 +53,14 @@
     width: 100px;
     grid-column: 4 / 5;
     justify-self: center;
+    font-size: 15px;
 }
 
 .delete.post-button {
     width: 100px;
     grid-column: 5 / 6;
     justify-self: center;
+    font-size: 15px;
 }
 
 .post-button {

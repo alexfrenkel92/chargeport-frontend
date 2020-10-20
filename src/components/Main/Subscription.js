@@ -44,11 +44,11 @@ function Subscription () {
 
   return (
     <div className='subscription-wrapper'>
-      <p className='form-title'>Feliratkozás a hírlevélre</p>
+      <p className='form-title'>Subscribe to our Newsletter</p>
       <form className='subscription'>
-        <input type='text' name='name' value={subscriptionData.name} onChange={handleName} placeholder='Név' />
-        <input type='email' name='email' value={subscriptionData.email} onChange={handleEmail} placeholder='E-mail cím' />
-        <Button className='subscribe-button' textContent='Feliratkozás' onClick={subscribe} />
+        <input type='text' name='name' value={subscriptionData.name} onChange={handleName} placeholder='Name' />
+        <input type='email' name='email' value={subscriptionData.email} onChange={handleEmail} placeholder='E-mail' />
+        <Button className='subscribe-button' textContent='Subscribe' onClick={subscribe} />
       </form>
     </div>
   );

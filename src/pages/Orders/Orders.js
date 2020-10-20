@@ -1,14 +1,23 @@
 import React, { useEffect } from 'react';
+import axios from 'axios';
 import { connect } from 'react-redux';
+import backendUrl from '../../services/backendLink';
+import Button from '../../components/Shared/Button';
 import classes from './Orders.module.css';
+import { fetchOrders } from '../../store/actions/fetchOrdersActions';
 
 const Orders = (props) => {
+
+    const handleDeleteOrderHistory = () => {
+        axios.delete(`${backendUrl}/api/orders`)
+            .then(() => {
+                window.location.reload()
+            })
+    }
 
     useEffect(() => {
         props.fetchOrders()
     }, [])
-
-    console.log(props.fetchedOrders)
 
     let pastOrders = !props.fetchedOrders ? null :
         <div className={classes.ordersContainer}>
@@ -28,14 +37,22 @@ const Orders = (props) => {
 
     return (
         <div className={`${classes.ordersWrapper} container`}>
-            <p className={classes.ordersTitle}>My past orders</p>
-                {pastOrders}
+            <div className={classes.topRows}>
+                <p className={classes.ordersTitle}>My past orders</p>
+                <Button
+                    className={classes.deleteHistoryBtn}
+                    textContent='Delete orders history'
+                    onClick={handleDeleteOrderHistory} />
+            </div>
+            {pastOrders}
         </div>
     )
 }
 
-const mapStateToProps = (state) => ({
-    fetchedOrders: state.orders.orders
-})
+const mapStateToProps = (state) => {
+    return {
+        fetchedOrders: state.fetchOrders.orders
+    }
+}
 
-export default connect(mapStateToProps)(Orders);
+export default connect(mapStateToProps, { fetchOrders })(Orders);
