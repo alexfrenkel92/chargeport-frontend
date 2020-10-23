@@ -16,7 +16,10 @@ const Orders = (props) => {
     }
 
     useEffect(() => {
-        props.fetchOrders()
+        const timer = setTimeout(() => {
+            props.fetchOrders()
+        }, 300);
+        return () => clearTimeout(timer)
     }, [])
 
     let pastOrders = !props.fetchedOrders ? null :

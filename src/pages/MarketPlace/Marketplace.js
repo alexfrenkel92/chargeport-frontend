@@ -60,38 +60,10 @@ const mapStateToProps = state => {
     return {
         fetchedProducts: state.products.items,
         cartItems: state.cart.items,
-        // nrOfProductsInCart: state.cart.nrOfProductsInCart
     }
 }
 
 export default connect(mapStateToProps, { fetchProducts, addToCart })(Marketplace);
-
-// const products = [
-//     {
-//         id: 1,
-//         name: 'TYPE2-SCHUKO-1F-16A',
-//         price: 250,
-//         img: schoku
-//     },
-//     {
-//         id: 2,
-//         name: 'TYPE2-1F-32A',
-//         price: 200,
-//         img: type2132
-//     },
-//     {
-//         id: 3,
-//         name: 'TYPE2-3F-32A',
-//         price: 250,
-//         img: type2332
-//     },
-//     {
-//         id: 4,
-//         name: 'TYPE2-3F-32A-WALLBOX',
-//         price: 400,
-//         img: wallbox
-//     }
-// ]
 
 
 // class Market extends Component {
