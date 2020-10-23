@@ -10,7 +10,7 @@ function Main() {
   return (
     <div className={`${classes.main} container`} >
       <div className='details-title'>
-        <h3>Köszöntünk az oldalon!</h3>
+        <h3>Welcome to our page!</h3>
       </div>
       <div className="row">
         <div className="col-sm">

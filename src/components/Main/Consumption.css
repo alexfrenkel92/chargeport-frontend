@@ -48,19 +48,19 @@
 .ac36img {
     grid-column: 2 / 3;
     grid-row: 1 / 1;
-    width: 40%;
+    width: 42px;
 }
 
 .ac22img {
     grid-column: 3 / 4;
     grid-row: 1 / 1;
-    width: 38%;
+    width: 40px;
 }
 
 .dc50img {
     grid-column: 4 / 5;
     grid-row: 1 / 1;
-    width: 45%;
+    width: 47px;
 }
 
 .img {
