@@ -11,6 +11,7 @@ import Footer from './components/Shared/Footer';
 import MarketPlace from './pages/MarketPlace/Marketplace';
 import Cart from './pages/Cart/Cart';
 import Orders from './pages/Orders/Orders';
+import Login from './pages/Login/Login';
 
 function App() {
     return (
@@ -23,6 +24,7 @@ function App() {
             <CacheRoute path='/forum' component={Forum} />
             <CacheRoute path='/cart' component={Cart} />
             <Route path='/orders' component={Orders} />
+            <Route path='/login' component={Login} />
             <Footer />
         </div>
     );

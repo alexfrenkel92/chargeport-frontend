@@ -89,4 +89,10 @@ const mapStateToProps = (state) => {
     }
 }
 
+// const mapDispatchToProps = dispatch => {
+//     return {
+//         removeFromCart: ()
+//     }
+// }
+
 export default connect(mapStateToProps, { removeFromCart, postOrders, fetchOrders, emptyCart })(Cart);

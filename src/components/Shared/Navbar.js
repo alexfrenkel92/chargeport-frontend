@@ -24,8 +24,11 @@ function Navbar() {
   function navigateToCart() {
     history.push('/cart')
   }
-  function navigateOrders() {
-    history.push('./orders')
+  function navigateToOrders() {
+    history.push('/orders')
+  }
+  function navigateToLogin() {
+    history.push('/login')
   }
 
   return (
@@ -52,12 +55,12 @@ function Navbar() {
             <div className="dropdown-menu" aria-labelledby="navbarDropdown">
               <p className="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" onClick={navigateToMarketplace}>EV Chargers</p>
               <p className="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" onClick={navigateToCart}>My Cart</p>
-              <p className="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" onClick={navigateOrders}>My Orders</p>
-              <p className="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show">Login</p>
+              <p className="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" onClick={navigateToOrders}>My Orders</p>
+              <p className="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" onClick={navigateToLogin}>Login</p>
             </div>
           </li>
           <li className="nav-item active">
-            <p className="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" onClick={navigateToAboutUS}>Rólunk</p>
+            <p className="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" onClick={navigateToAboutUS}>About Us</p>
           </li>
         </ul>
       </div>

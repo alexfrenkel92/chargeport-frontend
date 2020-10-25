@@ -1,13 +1,21 @@
-import React, { useEffect } from 'react';
+import React, { useCallback, useEffect } from 'react';
 import axios from 'axios';
-import { connect } from 'react-redux';
+import { connect, useSelector, useDispatch } from 'react-redux';
 import backendUrl from '../../services/backendLink';
 import Button from '../../components/Shared/Button';
 import classes from './Orders.module.css';
-import { fetchOrders } from '../../store/actions/fetchOrdersActions';
+import * as actions from '../../store/actions/index';
 
 const Orders = (props) => {
 
+    // /// REDUX /// NOT USED
+    // const fetchedOrders = useSelector(state => {
+    //     return state.fetchOrders.orders
+    // })
+    // const dispatch = useDispatch();
+    // const fetchOrders = useCallback(() => dispatch(actions.fetchOrders()))
+    // /// REDUX ///
+    
     const handleDeleteOrderHistory = () => {
         axios.delete(`${backendUrl}/api/orders`)
             .then(() => {
@@ -58,4 +66,12 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps, { fetchOrders })(Orders);
+const mapDispatchToProps = dispatch => {
+    return {
+        fetchOrders: () => dispatch(actions.fetchOrders())
+    }
+}
+
+// export default Orders;
+
+export default connect(mapStateToProps, mapDispatchToProps)(Orders);

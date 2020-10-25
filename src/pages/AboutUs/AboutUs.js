@@ -4,7 +4,7 @@ import reactReduxLogo from '../../img/react-redux-logo.png';
 import nodeJsLogo from '../../img/nodejs-logo.png';
 import awsLogo from '../../img/aws-logo.png';
 
-function aboutUs() {
+const AboutUs = () => {
   return (
     <div className={`${classes.aboutus} container`}>
       <div className="row">
@@ -26,4 +26,4 @@ function aboutUs() {
   );
 }
 
-export default aboutUs;
+export default AboutUs;
