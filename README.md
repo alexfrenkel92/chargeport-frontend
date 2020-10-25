@@ -1,4 +1,6 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The app is deployed here: https://chargeport-frontend.herokuapp.com/
+
+It is an SPA, writte in React + Redux and some Bootstrap.
 
 ## Available Scripts
 
