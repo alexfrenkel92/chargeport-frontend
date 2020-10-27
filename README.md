@@ -1,6 +1,6 @@
 The app is deployed here: https://chargeport-frontend.herokuapp.com/
 
-It is an SPA, written in React + Redux and some Bootstrap.
+It is an SPA, written in React + Redux and some Bootstrap. Backend in Node.js.
 
 ## Available Scripts
 
