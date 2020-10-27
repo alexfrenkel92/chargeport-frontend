@@ -32,7 +32,7 @@ function RenderPost() {
         </div>
       </div>
       <h2 className='render-post-data-header'>
-        A legutóbbi bejegyzések
+        Latest posts
       </h2>
       <div className="row">
         <div className="col-sm">

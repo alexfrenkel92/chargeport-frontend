@@ -4,7 +4,7 @@ import './Footer.css';
 function Footer() {
   return (
     <nav className="nav footer">
-      <p className="footer-content">Az oldal hobby projekt, a feltűntetett adatok nem valósak.</p>
+      <p className="footer-content">This is a hobby website, for practising. Some data are not real</p>
     </nav>
   );
 }

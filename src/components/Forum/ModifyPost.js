@@ -40,7 +40,7 @@ function ModifyPost({ id, postTitle, postContent, settingTheView, getPost }) {
             <textarea className='send-post title' value={postData.post_title} onChange={handleTitleChange} placeholder='Poszt címe' />
             <textarea className='send-post content' value={postData.post_content} onChange={handleContentChange} placeholder='Poszt tartalma' />
             <Button className='send-post-button'
-                textContent='Mentés'
+                textContent='Save'
                 onClick={handleModifyClick} />
         </div >
     );

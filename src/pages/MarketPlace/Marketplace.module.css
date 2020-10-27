@@ -1,0 +1,37 @@
+.marketplace {
+    padding: 20px;
+    min-height: calc(100vh - 100px);
+}
+
+.marketWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.marketWrapper div {
+    margin: 20px;
+    font-weight: 600;
+}
+.buttonToOrders {
+    border-radius: 5px;
+    outline: 0;
+    border: 1px rgba(128, 149, 129, 0.503) solid;
+    font-size: medium;
+    font-weight: 550;
+    color: rgb(6, 50, 7);
+    height: 35px;
+}
+.buttonToOrders:hover {
+    background-color: #3ba749;
+    color: white;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.buttonToOrders:active { 
+    outline: 0 !important;
+    transform: translateY(2px);
+    transition-timing-function: ease;
+}
+.buttonToOrders:focus { 
+    outline: 0 !important;
+}

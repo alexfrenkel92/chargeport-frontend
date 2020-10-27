@@ -85,8 +85,8 @@ function RenderPostData ({ id, post_title, post_content, score, getPost }) {
           <p className='render-post-score'>
             {score}
           </p>
-          <Button className='modify post-button' textContent='Módosítás' onClick={handleModifyClick} />
-          <Button className='delete post-button' textContent='Törlés' onClick={handleDeleteClick} />
+          <Button className='modify post-button' textContent='Edit' onClick={handleModifyClick} />
+          <Button className='delete post-button' textContent='Delete' onClick={handleDeleteClick} />
         </div>
       </div>
       : <div>

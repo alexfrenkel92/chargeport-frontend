@@ -1,0 +1,92 @@
+.cartWrapper {
+    padding: 20px;
+    border-radius: 5px;
+    min-height: calc(100vh - 110px);
+    margin-bottom: 10px;
+}
+.cartContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+.cartTitle {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 600;
+}
+.cartCard {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 200px;
+    min-width: 200px;
+    margin: 0 auto 20px auto;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 15px;
+    color: rgb(6, 50, 7);
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+.cartCard p {
+    padding: 0;
+    margin: 2px auto;
+}
+.cartCard h1 {
+    font-size: 15px;
+}
+.cartProductRemoveButton {
+    border-radius: 5px;
+    outline: 0;
+    border: 1px rgba(128, 149, 129, 0.503) solid;
+    font-size: small;
+    font-weight: 550;
+    color: rgb(6, 50, 7);
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    background-color: rgb(239, 239, 239)
+}
+.checkoutButton {
+    border-radius: 5px;
+    outline: 0;
+    border: 1px rgba(128, 149, 129, 0.503) solid;
+    font-size: medium;
+    font-weight: 550;
+    color: rgb(6, 50, 7);
+    width: 150px;
+    height: 30px;
+}
+.cartProductRemoveButton:hover,
+.checkoutButton:hover {
+    background-color: #3ba749;
+    color: white;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.cartProductRemoveButton:active,
+.checkoutButton:active { 
+    outline: 0 !important;
+    transform: translateY(2px);
+    transition-timing-function: ease;
+}
+.cartProductRemoveButton:focus,
+.checkoutButton:focus { 
+    outline: 0 !important;
+}
+
+.cartPriceCheckoutButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cartPriceCheckoutButton p {
+    margin: 20px;
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 900px) {
+    .cartContainer {
+        flex-direction: column;
+    }
+}

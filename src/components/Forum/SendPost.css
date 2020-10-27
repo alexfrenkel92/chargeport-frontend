@@ -30,12 +30,12 @@
     font-size: 15px;
     font-weight: 600;
     color: rgb(6, 50, 7);
+    width: 100px;
 }
 .send-post-button:hover {
     background-color: #3ba749;
     color: white;
     transition: 0.2s;
-    cursor: pointer;
 }
 .send-post-button:active { 
     outline: 0 !important;

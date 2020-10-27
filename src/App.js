@@ -1,26 +1,32 @@
 import React from 'react';
-// import { HashRouter as Router, Route } from 'react-router-dom';
+import { HashRouter as Router, Route } from 'react-router-dom';
 import CacheRoute from 'react-router-cache-route'
 import './App.css';
 import Navbar from './components/Shared/Navbar';
-import Main from './pages/Main';
-import AboutUs from './pages/AboutUs';
-import EVcalc from './pages/EVcalc';
-import Forum from './pages/Forum';
+import Main from './pages/HomePage/Main';
+import AboutUs from './pages/AboutUs/AboutUs';
+import EVcalc from './pages/EVcalc/EVcalc';
+import Forum from './pages/Posts/Posts';
 import Footer from './components/Shared/Footer';
-import MarketPlace from './pages/Marketplace';
+import MarketPlace from './pages/MarketPlace/Marketplace';
+import Cart from './pages/Cart/Cart';
+import Orders from './pages/Orders/Orders';
+import Login from './pages/Login/Login';
 
 function App() {
     return (
-            <div className='App'>
-                <Navbar />
-                <CacheRoute exact path='/' component={Main} />
-                <CacheRoute path='/aboutus' component={AboutUs} />
-                <CacheRoute path='/evcalculator' component={EVcalc} />
-                <CacheRoute path='/marketplace' component={MarketPlace} />
-                <CacheRoute path='/forum' component={Forum} />
-                <Footer />
-            </div>
+        <div className='App'>
+            <Navbar />
+            <CacheRoute exact path='/' component={Main} />
+            <CacheRoute path='/aboutus' component={AboutUs} />
+            <CacheRoute path='/evcalculator' component={EVcalc} />
+            <CacheRoute path='/marketplace' component={MarketPlace} />
+            <CacheRoute path='/forum' component={Forum} />
+            <CacheRoute path='/cart' component={Cart} />
+            <Route path='/orders' component={Orders} />
+            <Route path='/login' component={Login} />
+            <Footer />
+        </div>
     );
 }
 

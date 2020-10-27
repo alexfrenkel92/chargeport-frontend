@@ -21,6 +21,15 @@ function Navbar() {
   function navigateToMarketplace() {
     history.push('/marketplace')
   }
+  function navigateToCart() {
+    history.push('/cart')
+  }
+  function navigateToOrders() {
+    history.push('/orders')
+  }
+  function navigateToLogin() {
+    history.push('/login')
+  }
 
   return (
     <nav className="navbar sticky-top navbar-expand-lg navbar-light bg-light">
@@ -31,19 +40,27 @@ function Navbar() {
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav ml-auto">
           <li className="nav-item active">
-            <a className="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" onClick={navigateToHome}>Főoldal</a>
+            <p className="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" onClick={navigateToHome}>Homepage</p>
           </li>
           <li className="nav-item active">
-            <a className="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" onClick={navigateToEVcalc}>EV kalkulátor</a>
+            <p className="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" onClick={navigateToEVcalc}>EV calculator</p>
           </li>
           <li className="nav-item active">
-            <a className="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" onClick={navigateToForum}>Fórum</a>
+            <p className="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" onClick={navigateToForum}>Posts</p>
+          </li>
+          <li className="nav-item dropdown">
+            <p className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Marketplace
+            </p>
+            <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+              <p className="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" onClick={navigateToMarketplace}>EV Chargers</p>
+              <p className="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" onClick={navigateToCart}>My Cart</p>
+              <p className="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" onClick={navigateToOrders}>My Orders</p>
+              <p className="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" onClick={navigateToLogin}>Login</p>
+            </div>
           </li>
           <li className="nav-item active">
-            <a className="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" onClick={navigateToMarketplace}>Piactér</a>
-          </li>
-          <li className="nav-item active">
-            <a className="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" onClick={navigateToAboutUS}>Rólunk</a>
+            <p className="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" onClick={navigateToAboutUS}>About Us</p>
           </li>
         </ul>
       </div>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './EVcalc.css';
-import Button from '../components/Shared/Button';
+import Button from '../../components/Shared/Button';
 
 function EVcalc() {
   const [evData, setEvData] = useState({ evPrice: '', evFuelPrice: '', evConsumption: '' });
@@ -59,13 +59,13 @@ function EVcalc() {
       <div className="row">
         <div className='evcalc-details-title'>
           <span>
-          Az alábbi számológép segíségével kiszámolhatod, hogy üzemanyagköltség és éves futásteljesítmény alapján hány év alatt kerül egy költségszintre egy elektromos és belsőégésű motorral szerelt jármű. 
-          A vételár és üzemanyagköltségen kívül más költség nem került számításba. 
-          Az időszakot lerövidítheti:
+          By using the calculator below, you can get a picture of the cost of ownership of an EV (electric vehicle) and an ICE (internal combustion engine) vehicle. 
+          By filling all fields, it shows each one's consumption, fuel cost, savings (on fuel cost only) and the expected price parity of the two purchase.
+          You can shorten the time by which price parity is achieved, by:
           </span>
           <ul>
-          <li>otthoni napelemes rendszeről való töltés, amivel az üzemanyagköltség 0Ft/kW köré süllyedhet;</li>
-          <li>a minnél nagyobb éves futásteljesítmény.</li>
+          <li>charging the EV from a solar home system, by what the fuel cost can drop around 0 HUF/kW;</li>
+          <li>higher annual mileage.</li>
           </ul>
         </div>
       </div>
@@ -73,15 +73,15 @@ function EVcalc() {
         {/* <div class="col">
         </div> */}
         <div className="col title">
-          <p className='titleEV'>Elektromos</p>
+          <p className='titleEV'>EV</p>
         </div>
         <div className="col title">
-          <p className='titleICE'>Belsőégésű</p>
+          <p className='titleICE'>ICE</p>
         </div>
       </div>
       <div className="row">
         <div className="col">
-          <p className='mileage evcalc'>Éves futásteljesítmény</p>
+          <p className='mileage evcalc'>Annual mileage</p>
         </div>
         <div className="col">
           <textarea className='mileage-merged' value={mileageData.mileage} onChange={handleMileage} placeholder='pl. 25.000km' />
@@ -89,73 +89,73 @@ function EVcalc() {
       </div>
       <div className="row">
         <div className="col">
-          <p className='price evcalc'>Vételár</p>
+          <p className='price evcalc'>Purchase price</p>
         </div>
         <div className="col">
-          <textarea className='ev-price' value={evData.evPrice} onChange={handleEVPrice} placeholder='pl. 8 millió Ft' />
+          <textarea className='ev-price' value={evData.evPrice} onChange={handleEVPrice} placeholder='ex. 8 million HUF' />
         </div>
         <div className="col">
-          <textarea className='ice-price' value={iceData.icePrice} onChange={handleICEPrice} placeholder='pl. 5 millió Ft' />
-        </div>
-      </div>
-      <div className="row">
-        <div className="col">
-          <p className='fuel-cost evcalc'>Üzemanyagköltség</p>
-        </div>
-        <div className="col">
-          <textarea className='kW-price' value={evData.evFuelPrice} onChange={handleEVFuelPrice} placeholder='pl 40Ft/kW' />
-        </div>
-        <div className="col">
-          <textarea className='l-price' value={iceData.iceFuelPrice} onChange={handleICEFuelPrice} placeholder='pl 380Ft/l' />
+          <textarea className='ice-price' value={iceData.icePrice} onChange={handleICEPrice} placeholder='ex. 5 million HUF' />
         </div>
       </div>
       <div className="row">
         <div className="col">
-          <p className='consumption evcalc'>Fogyasztás</p>
+          <p className='fuel-cost evcalc'>Fuel cost</p>
         </div>
         <div className="col">
-          <textarea className='consumption-ev' value={evData.evConsumption} onChange={handleEVConsumption} placeholder='pl 16kW/100km' />
+          <textarea className='kW-price' value={evData.evFuelPrice} onChange={handleEVFuelPrice} placeholder='ex. 40 HUF/kW' />
         </div>
         <div className="col">
-          <textarea className='consumption-ice' value={iceData.iceConsumption} onChange={handleICEConsumption} placeholder='pl 7l/100km' />
-        </div>
-      </div>
-      <div className="row">
-        <div className="col">
-        <p className='fuel-cost-100km evcalc'>Üzemanyag költsége/100km</p>
-        </div>
-        <div className="col">
-          <Button className='ev-fuel-cost-100km to-center' textContent={evFuelCost100km + ' Ft/100km'} />
-        </div>
-        <div className="col">
-          <Button className='ice-fuel-cost-100km to-center' textContent={iceFuelCost100km + ' Ft/100km'} />
+          <textarea className='l-price' value={iceData.iceFuelPrice} onChange={handleICEFuelPrice} placeholder='ex. 380 HUF/l' />
         </div>
       </div>
       <div className="row">
         <div className="col">
-          <p className='year-mileage evcalc'>Éves üzemanyagköltség</p>
+          <p className='consumption evcalc'>Consumption</p>
         </div>
         <div className="col">
-          <Button className='ev-fuel-cost-yearly to-center' textContent={evFuelCostyear + ' Ft/év'} />
+          <textarea className='consumption-ev' value={evData.evConsumption} onChange={handleEVConsumption} placeholder='ex. 16kW/100km' />
         </div>
         <div className="col">
-        < Button className='ice-fuel-cost-yearly to-center' textContent={iceFuelCostyear + ' Ft/év'} />
-        </div>
-      </div>
-      <div className="row">
-        <div className="col">
-          <p className='difference evcalc'>Megtakarítás</p>
-        </div>
-        <div className="col">
-          <Button className='saving to-center' textContent={handleSaving() + ' Ft/év'} />
+          <textarea className='consumption-ice' value={iceData.iceConsumption} onChange={handleICEConsumption} placeholder='ex. 7l/100km' />
         </div>
       </div>
       <div className="row">
         <div className="col">
-          <p className='duration evcalc'>Árparitás várható időtartalma</p>
+        <p className='fuel-cost-100km evcalc'>Fuel cost/100km</p>
         </div>
         <div className="col">
-          <Button className='timespan to-center' textContent={handleTimespan() + ' év'} />
+          <Button className='ev-fuel-cost-100km to-center' textContent={evFuelCost100km + ' HUF/100km'} />
+        </div>
+        <div className="col">
+          <Button className='ice-fuel-cost-100km to-center' textContent={iceFuelCost100km + ' HUF/100km'} />
+        </div>
+      </div>
+      <div className="row">
+        <div className="col">
+          <p className='year-mileage evcalc'>Annual fuel cost</p>
+        </div>
+        <div className="col">
+          <Button className='ev-fuel-cost-yearly to-center' textContent={evFuelCostyear + ' HUF/year'} />
+        </div>
+        <div className="col">
+        < Button className='ice-fuel-cost-yearly to-center' textContent={iceFuelCostyear + ' HUF/year'} />
+        </div>
+      </div>
+      <div className="row">
+        <div className="col">
+          <p className='difference evcalc'>Savings on fuel cost</p>
+        </div>
+        <div className="col">
+          <Button className='saving to-center' textContent={handleSaving() + ' HUF/year'} />
+        </div>
+      </div>
+      <div className="row">
+        <div className="col">
+          <p className='duration evcalc'>Expected price parity in</p>
+        </div>
+        <div className="col">
+          <Button className='timespan to-center' textContent={handleTimespan() + ' year'} />
         </div>
       </div>
     </div>
