@@ -20,3 +20,16 @@ export const postOrders = (cartItems) => {
             })
     }
 }
+
+export const fetchOrders = () => {
+    return dispatch => {
+        axios.get(`${backendUrl}/api/orders`)
+            .then(response => {
+                console.log(response.data)
+                dispatch({
+                    type: actionTypes.FETCH_ORDERS,
+                    payload: response.data
+                })
+            })
+    }
+}

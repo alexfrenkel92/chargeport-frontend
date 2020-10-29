@@ -4,9 +4,6 @@ import './Details.css';
 function Details () {
   return (
     <article className='details'>
-      {/* <div className='details-title'>
-        <h3>Köszöntünk az oldalon!</h3>
-      </div> */}
       <div className='details-content'>
         <p>In the future more and more electriv vehicles will be cruising in our cities and on our roads. 
           The future of transport is electric and electric transport needs great charging infrastructure.</p>

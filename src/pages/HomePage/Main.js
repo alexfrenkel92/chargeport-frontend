@@ -3,7 +3,7 @@ import classes from './Main.module.css';
 import Details from '../../components/Main/Details';
 import Video from '../../components/Main/Video';
 import Subscription from '../../components/Main/Subscription';
-import MyGallery from '../../components/Main/Gallery';
+import Gallery from '../../components/Main/Gallery';
 import Consumption from '../../components/Main/Consumption';
 
 function Main() {
@@ -22,7 +22,7 @@ function Main() {
       </div>
       <div className="row">
         <div className="col-sm">
-          <MyGallery />
+          <Gallery />
         </div>
         <div className="col-sm">
           <Consumption />

@@ -1,6 +1,6 @@
 import * as actionTypes from '../actions/actionTypes';
 
-const cartItems = localStorage.getItem("cartItems")
+export const cartItems = localStorage.getItem("cartItems")
     ? JSON.parse(localStorage.getItem("cartItems"))
     : [];
 

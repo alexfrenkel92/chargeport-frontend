@@ -12,6 +12,7 @@ export const fetchProducts = () => {
                     payload: response.data
                 })
                 localStorage.setItem('products', JSON.stringify(response.data))
+                console.log(response.data)
             })
     }
 }

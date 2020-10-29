@@ -5,11 +5,11 @@ const reducer = (state = {}, action) => {
         case actionTypes.FETCH_PRODUCTS:
             return {
                 ...state,
-                items: action.payload
+                items: action.payload,
             }
             default:
                 return state
-    }
+            }
 }
 
 export default reducer;
